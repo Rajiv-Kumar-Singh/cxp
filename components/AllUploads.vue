@@ -1,58 +1,49 @@
 <template>
-  <div class="post">
-    <div class="post__container">
-      <div class="post__header"><span>All POSTS</span></div>
-
-      <div class="post__content-container">
-        <div class="post__recent-uploads">
-          <div class="post__recent-uploads-header">
-            <span>Recent Uploads</span>
-            <img src="../assets/icon/arrow.svg" alt="loading image" />
-          </div>
-          <div class="post__cards-container">
-            <div class="post__card" v-for="card in cards" :key="card.title">
-              <div class="post__card-box">
-                <NuxtLink :to="`${card.codePageLink}`" class="post__card-route">
-                  <div class="post__card-thumbnail">
-                    <img :src="`${card.thumbnail}`" alt="loading image" />
-                    <p>{{ card.title }}</p>
-                  </div>
-                  <div class="post__card-description">
-                    <p>{{ card.description }}</p>
-                  </div>
-                </NuxtLink>
-                <div class="post__card-btn-box">
-                  <a
-                    class="post__button"
-                    :href="`${card.youtubeLink}`"
-                    target="_blank"
-                  >
-                    <span>Watch on</span>
-                    <img src="../assets/icon/youtube.svg" alt="loading image" />
-                  </a>
-                </div>
+  <div class="uploads">
+    <div class="uploads__container">
+      <div class="uploads__header">
+        <span>All Uploads</span>
+        <img src="../assets/icon/arrow.svg" alt="loading image" />
+      </div>
+      <div class="uploads__cards-container">
+        <div class="uploads__card" v-for="card in cards" :key="card.title">
+          <div class="uploads__card-box">
+            <NuxtLink :to="`${card.codePageLink}`" class="uploads__card-route">
+              <div class="uploads__card-thumbnail">
+                <img :src="`${card.thumbnail}`" alt="loading image" />
+                <p>{{ card.title }}</p>
               </div>
+              <div class="uploads__card-description">
+                <p>{{ card.description }}</p>
+              </div>
+            </NuxtLink>
+            <div class="uploads__card-btn-box">
+              <a
+                class="uploads__button"
+                :href="`${card.youtubeLink}`"
+                target="_blank"
+              >
+                <span>Watch on</span>
+                <img src="../assets/icon/youtube.svg" alt="loading image" />
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="post__all-uploads">
-        <AllUploads />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// importing components
-import AllUploads from '../components/AllUploads.vue';
-
 // importing thumbnails
 import reactShpere from '../assets/thumbnails/3d-react-sphere.jpg';
 import VideoControl from '../assets/thumbnails/video-controls.jpg';
 import gradientButton from '../assets/thumbnails/gradient-button.jpg';
 import htmlSphere from '../assets/thumbnails/html-text-sphere.jpg';
 import AdvTypewriter from '../assets/thumbnails/adv-typewriter.jpg';
+import Blob from '../assets/thumbnails/blob.jpg';
+import SkillBar from '../assets/thumbnails/skill-bar.jpg';
+import ScaleHover from '../assets/thumbnails/scale-hover-effect.jpg';
 
 export default {
   name: 'Post',
@@ -103,77 +94,57 @@ export default {
             'In this blog we will create an awesome Typewriter Effect using HTML CSS and JavaScript.',
           youtubeLink: 'https://youtu.be/7Udqo7dbi5U',
         },
+        {
+          codePageLink: '/blob',
+          thumbnail: `${Blob}`,
+          title: 'Create Blob Shape With Animation Using Only HTML & CSS',
+          description:
+            'In this blog we will create Blob shape with animation using HTML & CSS only.',
+          youtubeLink: 'https://youtu.be/AtFRzx4Dj3w',
+        },
+        {
+          codePageLink: '/skillbar',
+          thumbnail: `${SkillBar}`,
+          title: 'Animate Skill Bar On Scroll Using HTML, CSS & JavaScript',
+          description:
+            'In this blog we will be adding scroll animation to skill bars using HTML, CSS & JavaScript',
+          youtubeLink: 'https://youtu.be/azIXOvg0b_U',
+        },
+        {
+          codePageLink: '/scaleHoverEffect',
+          thumbnail: `${ScaleHover}`,
+          title:
+            'Create Advanced Text Hover Effect Using HTML CSS & JavaScript',
+          description:
+            'In this blog you will learn to create an advance Hover Text Effect Using HTML, CSS and JavaScript',
+          youtubeLink: 'https://youtu.be/D6fv9fzi6I8',
+        },
       ],
     };
-  },
-  components: {
-    AllUploads,
   },
 };
 </script>
 
 <style lang="scss">
-.post {
+.uploads {
   position: relative;
   top: 0;
+  width: 65vw;
   padding-bottom: 5em;
 
   &__container {
     position: relative;
     top: 0;
+    padding: 1em;
+    margin-top: 5em;
+    // border: 2px solid red;
   }
 
   &__header {
-    position: relative;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      position: relative;
-      text-align: center;
-      font-family: 'Teko', sans-serif;
-      font-size: 4em;
-      font-weight: 600;
-      color: #ffffff;
-      line-height: 1;
-      background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
-        linear-gradient(to right, #e96443, #904e95) border-box;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: '';
-        width: 1.5em;
-        height: 0.05em;
-        background: linear-gradient(to right, #d90ae8, #e96443);
-      }
-    }
-  }
-
-  &__content-container {
-    position: relative;
-    top: 0;
-    width: 65vw;
-    padding: 1em;
-    margin-top: 5em;
-  }
-
-  &__recent-uploads {
-    position: relative;
-    top: 0;
-  }
-
-  &__recent-uploads-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
     span {
       position: relative;
       font-size: 1.8em;
@@ -191,7 +162,7 @@ export default {
         left: 0;
         bottom: 0;
         content: '';
-        width: 354%;
+        width: 525%;
         height: 0.05em;
         background: linear-gradient(to right, #d90ae8, #e96443);
       }
@@ -203,18 +174,25 @@ export default {
     }
   }
 
+  //   Card styling
   &__cards-container {
     position: relative;
     top: 0;
     width: 100%;
+    height: 50em;
     margin-top: 3em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     overflow: scroll;
     scroll-behavior: smooth;
-    overflow-y: hidden;
-    padding-bottom: 1.5em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    gap: 1em;
+    padding: 1em;
+    background: #2c2a2a80;
+    border-radius: 0.5em;
 
     &::-webkit-scrollbar {
       height: 0.15em;
@@ -228,7 +206,7 @@ export default {
       background: #203258;
     }
 
-    &::-webkit-scrollbar-thumb:horizontal {
+    &::-webkit-scrollbar-thumb:vertical {
       background: linear-gradient(to right, #d90ae8, #e96443);
       border-radius: 0.625em;
     }
@@ -236,14 +214,13 @@ export default {
 
   &__card {
     position: relative;
-    min-width: 18em;
+    width: 18em;
     height: 21em;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     background: #2c3149;
     border-radius: 0.5em;
     line-height: 1.5;
-    margin-right: 1em;
     cursor: pointer;
     a {
       text-decoration: none;
