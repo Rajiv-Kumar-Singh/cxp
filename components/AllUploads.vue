@@ -1,5 +1,5 @@
 <template>
-  <div class="uploads">
+  <div class="uploads" id="all-uploads">
     <div class="uploads__container">
       <div class="uploads__header">
         <span>All Uploads</span>

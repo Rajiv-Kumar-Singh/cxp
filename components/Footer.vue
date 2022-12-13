@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer__container">
-      <p>Copyright © 2022 CodeXpool</p>
+      <p>Copyright © 2022 Codemmit</p>
       <div class="footer__social">
         <a href="https://www.instagram.com/cxp_codes/" target="_blank">
           <img src="~/assets/icon/instagram.svg" alt="ig icon" />
@@ -23,14 +23,33 @@ export default {
 <style lang="scss" scoped>
 .footer {
   position: relative;
-  top: 0;
-  background-color: gray;
+  width: 100%;
+  bottom: 0;
+  background-color: #111524;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 1.5em;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: #ffffff;
+  }
+
+  &__social {
+    a {
+      img {
+        width: 2em;
+        height: auto;
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.5em;
+      }
+    }
   }
 }
 </style>

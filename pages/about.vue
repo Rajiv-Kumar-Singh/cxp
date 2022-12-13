@@ -47,6 +47,7 @@ export default {
 .about {
   position: relative;
   top: 0;
+  height: 85vh;
   padding: 2em;
 
   &__header {

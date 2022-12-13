@@ -2,14 +2,14 @@
   <div class="header">
     <div class="header__logo">
       <NuxtLink to="/">
-        <span>CodeXpool</span>
+        <span>Codemmit</span>
       </NuxtLink>
     </div>
     <div class="header__navigation-links">
       <NuxtLink to="/"> HOME </NuxtLink>
       <NuxtLink to="#post"> POSTS </NuxtLink>
       <NuxtLink to="/about"> ABOUT </NuxtLink>
-      <NuxtLink to="/"> CONTACT </NuxtLink>
+      <NuxtLink to="/contact"> CONTACT </NuxtLink>
     </div>
   </div>
 </template>

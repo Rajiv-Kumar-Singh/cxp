@@ -3,13 +3,21 @@
     <div class="hero__container">
       <div class="hero__info">
         <p>
-          All! Just <br />
-          For Pixels
+          <!-- All! Just <br />
+          For Pixels -->
+          <span> Namaste From Codemmit </span>
         </p>
-        <button class="hero__primary-btn">Explore</button>
-        <button class="hero__secondary-btn">Contact Us</button>
+        <p class="hero__description">
+          Explore free aspiring content for your projects.
+        </p>
+        <a href="#all-uploads">
+          <button class="hero__primary-btn">Explore</button></a
+        >
+        <NuxtLink to="/contact">
+          <button class="hero__secondary-btn">Contact Us</button></NuxtLink
+        >
       </div>
-      <div class="hero__carousel">
+      <!-- <div class="hero__carousel">
         <Carousel :settings="settings" :wrap-around="true">
           <Slide v-for="slide in carouselSlides" :key="slide">
             <div class="hero__carousel-container">
@@ -29,17 +37,17 @@
             <Pagination />
           </template>
         </Carousel>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import { Carousel, Pagination, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import { Carousel, Pagination, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 
 export default {
-  name: "Hero",
+  name: 'Hero',
   components: {
     Carousel,
     Slide,
@@ -50,7 +58,7 @@ export default {
       // carousel settings
       settings: {
         itemsToShow: 1,
-        snapAlign: "cener",
+        snapAlign: 'cener',
         autoplay: 10000,
         touchDrag: true,
         mouseDrag: true,
@@ -65,22 +73,22 @@ export default {
       //   },
       carouselSlides: [
         {
-          videoURL: "https://www.youtube.com/embed/5jlDHSqjZcc",
+          videoURL: 'https://www.youtube.com/embed/5jlDHSqjZcc',
         },
         {
-          videoURL: "https://www.youtube.com/embed/QSrvL8VU3fE",
+          videoURL: 'https://www.youtube.com/embed/QSrvL8VU3fE',
         },
         {
-          videoURL: "https://www.youtube.com/embed/o5uV7fxh9To",
+          videoURL: 'https://www.youtube.com/embed/o5uV7fxh9To',
         },
         {
-          videoURL: "https://www.youtube.com/embed/7Udqo7dbi5U",
+          videoURL: 'https://www.youtube.com/embed/7Udqo7dbi5U',
         },
         {
-          videoURL: "https://www.youtube.com/embed/D6fv9fzi6I8",
+          videoURL: 'https://www.youtube.com/embed/D6fv9fzi6I8',
         },
         {
-          videoURL: "https://www.youtube.com/embed/1AE3qtKA79w",
+          videoURL: 'https://www.youtube.com/embed/1AE3qtKA79w',
         },
       ],
     };
@@ -109,20 +117,48 @@ export default {
 
   &__info {
     color: #ffffff;
-    font-family: "Teko", sans-serif;
-    font-size: 5em;
+    font-family: 'Teko', sans-serif;
     font-weight: 600;
     line-height: 1;
+    width: 100%;
+    text-align: center;
+
+    p {
+      span {
+        font-size: 5em;
+        position: relative;
+        text-align: center;
+        color: #ffffff;
+        line-height: 1;
+        background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+          linear-gradient(to right, #e96443, #904e95) border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
     button {
+      margin-top: 2em;
+      font-size: 1em;
       white-space: nowrap;
       width: 9em;
       height: 2.6em;
       cursor: pointer;
     }
   }
+
+  &__description {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+  }
+
   &__primary-btn {
     background: linear-gradient(156deg, #d90ae8, #e96443);
-    font-family: "Righteous", cursive;
+    font-family: 'Righteous', cursive;
     color: #ffffff;
     font-size: 0.2em;
     letter-spacing: 0.05em;
@@ -139,7 +175,7 @@ export default {
     border: 0.15em solid transparent;
     background: linear-gradient(#191d30, #191d30) padding-box,
       linear-gradient(45deg, #e96443, #904e95) border-box;
-    font-family: "Righteous", cursive;
+    font-family: 'Righteous', cursive;
     color: #ffffff;
     font-size: 0.2em;
     letter-spacing: 0.05em;
