@@ -7,15 +7,15 @@
     </div>
     <div class="header__navigation-links">
       <NuxtLink to="/"> HOME </NuxtLink>
-      <NuxtLink to="/"> POSTS </NuxtLink>
-      <NuxtLink to="/"> ABOUT </NuxtLink>
-      <NuxtLink to="/"> CONTACT US </NuxtLink>
+      <NuxtLink to="#post"> POSTS </NuxtLink>
+      <NuxtLink to="/about"> ABOUT </NuxtLink>
+      <NuxtLink to="/"> CONTACT </NuxtLink>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
 };
 </script>
 
@@ -28,7 +28,7 @@ export default {
   padding: 1em 2%;
   box-sizing: border-box;
   margin: 0;
-  font-family: "Teko", sans-serif;
+  font-family: 'Teko', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +55,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin-right: 2em;
+    gap: 2em;
+
     a {
       color: #ffffff;
       font-size: 1.3em;
@@ -68,9 +70,16 @@ export default {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: zoomIn 0.1s linear forwards;
     }
-    a:not(:last-child) {
-      margin-right: 2em;
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1, 1);
+      }
+      100% {
+        transform: scale(1.05, 1.05);
+      }
     }
   }
 }

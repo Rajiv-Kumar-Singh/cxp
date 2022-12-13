@@ -10,27 +10,26 @@ import SourceCode from '../components/SourceCode.vue';
 import Code from '~/components/Code.vue';
 
 // import thumbnails
-import ScaleHover from '~/assets/thumbnails/scale-hover-effect.jpg';
+import ScaleHover from '~/assets/thumbnails/like-btn.jpg';
 
 // import code file
-import codes from '~/assets/codes/scaleHover.js';
+import codes from '~/assets/codes/likeBtn.js';
 
 export default {
-  name: 'ScaleHover',
+  name: 'LikeBtn',
   data() {
     return {
       content: {
-        title:
-          'Create Advanced Text Hover Effect Using HTML CSS and JavaScript',
+        title: 'Create Like Button Using HTML, CSS and JavaScript',
         image: ScaleHover,
         description:
-          'Hello Developers, In this blog you will learn to create an awesome advanced Text Hover Effect Using HTML, CSS and JavaScript',
+          'Hello Developers, In this blog you will learn to create an Like button, which when clicked it becomes red and if clicked again its color become grey',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this.',
           },
         ],
-        youtubeVideo: 'https://www.youtube.com/embed/D6fv9fzi6I8',
+        youtubeVideo: 'https://www.youtube.com/embed/1AE3qtKA79w',
       },
       codeContent: {
         htmlSyntax: true,

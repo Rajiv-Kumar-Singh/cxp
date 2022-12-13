@@ -44,6 +44,7 @@ import AdvTypewriter from '../assets/thumbnails/adv-typewriter.jpg';
 import Blob from '../assets/thumbnails/blob.jpg';
 import SkillBar from '../assets/thumbnails/skill-bar.jpg';
 import ScaleHover from '../assets/thumbnails/scale-hover-effect.jpg';
+import LikeBtn from '../assets/thumbnails/like-btn.jpg';
 
 export default {
   name: 'Post',
@@ -111,13 +112,21 @@ export default {
           youtubeLink: 'https://youtu.be/azIXOvg0b_U',
         },
         {
-          codePageLink: '/scaleHoverEffect',
+          codePageLink: '/scaleHover',
           thumbnail: `${ScaleHover}`,
           title:
             'Create Advanced Text Hover Effect Using HTML CSS & JavaScript',
           description:
             'In this blog you will learn to create an advance Hover Text Effect Using HTML, CSS and JavaScript',
           youtubeLink: 'https://youtu.be/D6fv9fzi6I8',
+        },
+        {
+          codePageLink: '/likeBtn',
+          thumbnail: `${LikeBtn}`,
+          title: 'Create Like Button Using HTML, CSS and JavaScript',
+          description:
+            'In this blog you will learn to create Like button using HTML, CSS and JavaScript',
+          youtubeLink: 'https://youtu.be/1AE3qtKA79w',
         },
       ],
     };
@@ -222,6 +231,20 @@ export default {
     border-radius: 0.5em;
     line-height: 1.5;
     cursor: pointer;
+
+    &:hover {
+      animation: zoomIn 0.1s linear forwards;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1, 1);
+      }
+      100% {
+        transform: scale(1.03, 1.03);
+      }
+    }
+
     a {
       text-decoration: none;
     }

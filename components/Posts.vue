@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post" id="post">
     <div class="post__container">
       <div class="post__header"><span>All POSTS</span></div>
 
@@ -214,6 +214,7 @@ export default {
     overflow: scroll;
     scroll-behavior: smooth;
     overflow-y: hidden;
+    padding-top: 0.5em;
     padding-bottom: 1.5em;
 
     &::-webkit-scrollbar {
@@ -245,6 +246,20 @@ export default {
     line-height: 1.5;
     margin-right: 1em;
     cursor: pointer;
+
+    &:hover {
+      animation: zoomIn 0.1s linear forwards;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1, 1);
+      }
+      100% {
+        transform: scale(1.03, 1.03);
+      }
+    }
+
     a {
       text-decoration: none;
     }
