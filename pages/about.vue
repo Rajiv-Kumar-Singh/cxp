@@ -5,7 +5,7 @@
     </div>
     <div class="about__description">
       <p>
-        CodeXpool provide coding content related to full-stack development,
+        Codemmit provide coding content related to full-stack development,
         mostly related to front-end development. Here i post FREE Source Code
         and video tutorial for my
         <a
