@@ -146,6 +146,23 @@ export default {
     border-radius: 0.5em;
     width: 22em;
   }
+
+  @media screen and (max-width: 768px) {
+    &__header {
+      font-size: 0.875em;
+    }
+  }
+
+  @media screen and (max-width: 435px) {
+    &__carousel-container iframe {
+      width: 20em;
+    }
+  }
+  @media screen and (max-width: 404px) {
+    &__carousel-container iframe {
+      width: 18em;
+    }
+  }
 }
 
 .carousel__pagination-button:hover::after,

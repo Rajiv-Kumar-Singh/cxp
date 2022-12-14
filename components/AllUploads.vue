@@ -190,14 +190,16 @@ export default {
     width: 100%;
     height: 50em;
     margin-top: 3em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     overflow: scroll;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-x: hidden;
+    overflow: scroll;
     gap: 1em;
     padding: 1em;
     background: #2c2a2a80;
@@ -219,13 +221,18 @@ export default {
       background: linear-gradient(to right, #d90ae8, #e96443);
       border-radius: 0.625em;
     }
+
+    &::-webkit-scrollbar-thumb:horizontal {
+      background: linear-gradient(to right, #d90ae8, #e96443);
+      border-radius: 0.625em;
+    }
   }
 
   &__card {
     position: relative;
     width: 32%;
     max-width: 20em;
-    min-width: 14em;
+    min-width: 16em;
     height: 21em;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
@@ -332,6 +339,22 @@ export default {
     img {
       width: 2em;
       height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    &__header {
+      span {
+        &::after {
+          width: 266%;
+        }
+      }
+
+      img {
+        width: 1.5em;
+        height: auto;
+      }
     }
   }
 }

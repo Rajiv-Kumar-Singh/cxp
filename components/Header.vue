@@ -16,6 +16,14 @@
         <NuxtLink to="/#post"> POSTS </NuxtLink>
         <NuxtLink to="/about"> ABOUT </NuxtLink>
         <NuxtLink to="/contact"> CONTACT </NuxtLink>
+        <div class="header__social">
+          <a href="https://www.instagram.com/cxp_codes/" target="_blank">
+            <img src="~/assets/icon/instagram.svg" alt="ig icon" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="~/assets/icon/linkedin.svg" alt="linkedin icon" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -113,9 +121,13 @@ export default {
     }
   }
 
+  &__social {
+    display: none;
+  }
+
   &__hamburger-icon {
     position: absolute;
-    top: 2.3em;
+    top: 1.7em;
     right: 5%;
     width: 1.65em;
     height: 1.2em;
@@ -171,6 +183,9 @@ export default {
   }
 
   @media screen and (max-width: 768px) {
+    &__logo {
+      font-size: 0.65em;
+    }
     &__hamburger-icon {
       display: flex;
     }
@@ -207,6 +222,23 @@ export default {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+      }
+    }
+
+    &__social {
+      display: flex;
+      position: absolute;
+      bottom: 1em;
+      a {
+        img {
+          width: 1.5em;
+          height: auto;
+          cursor: pointer;
+        }
+
+        &:not(:last-child) {
+          margin-right: 0.5em;
+        }
       }
     }
   }
