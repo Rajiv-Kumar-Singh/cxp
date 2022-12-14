@@ -14,8 +14,13 @@
           <button class="hero__primary-btn">Explore</button></a
         >
         <NuxtLink to="/contact">
-          <button class="hero__secondary-btn">Contact Us</button></NuxtLink
+          <button class="hero__secondary-btn">Contact Me</button></NuxtLink
         >
+        <div class="hero__arrow-icon">
+          <span>
+            <img src="~/assets/icon/arrow-down.svg" alt="arrow" />
+          </span>
+        </div>
       </div>
       <!-- <div class="hero__carousel">
         <Carousel :settings="settings" :wrap-around="true">
@@ -101,7 +106,7 @@ export default {
   position: relative;
   top: 0;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   //   border: 2px solid red;
 
   &__container {
@@ -192,6 +197,59 @@ export default {
 
   &__carousel-container iframe {
     border-radius: 0.5em;
+  }
+
+  &__arrow-icon {
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.4em;
+      height: 2.4em;
+      border-radius: 50%;
+      border: 0.06em solid #eaeaea;
+
+      img {
+        animation: iconBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+          alternate;
+      }
+    }
+  }
+
+  @keyframes iconBounce {
+    from {
+      transform: translateY(0.1875em);
+    }
+    to {
+      transform: translateY(-0.1875em);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__info {
+      p {
+        span {
+          font-size: 2.65em;
+        }
+      }
+    }
+
+    &__description {
+      font-size: 0.875em;
+    }
+
+    button {
+      margin-top: 2em;
+      font-size: 0.875em;
+      white-space: nowrap;
+      width: 7em;
+      height: 2.6em;
+    }
   }
 }
 
