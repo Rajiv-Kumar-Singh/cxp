@@ -39,7 +39,6 @@
                   </a>
                 </div>
               </div>
-              <!-- <div class="post__card-overlay"></div> -->
             </div>
           </div>
         </div>

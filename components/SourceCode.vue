@@ -39,9 +39,9 @@
 // importing thumbnails
 // import reactShpere from "../assets/thumbnails/3d-react-sphere.jpg";
 
-import Code from "~/components/Code.vue";
+import Code from '~/components/Code.vue';
 export default {
-  name: "SourceCode",
+  name: 'SourceCode',
   components: {
     Code,
   },
@@ -69,7 +69,7 @@ export default {
   }
 
   &__title {
-    font-family: "Righteous", cursive;
+    font-family: 'Righteous', cursive;
     font-size: 1.5em;
     font-weight: 400;
     span {
@@ -98,8 +98,8 @@ export default {
   }
 
   &__intro-text {
-    font-size: 1.12em;
-    font-family: "Nunito", sans-serif;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
     font-weight: 200;
     p {
       margin-top: 0.5em;
@@ -114,7 +114,7 @@ export default {
     h1 {
       margin-bottom: 0.5em;
       span {
-        font-family: "Righteous", cursive;
+        font-family: 'Righteous', cursive;
         font-size: 1em;
         font-weight: 400;
         background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
@@ -127,6 +127,52 @@ export default {
 
     iframe {
       border-radius: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__container {
+      width: 100%;
+    }
+
+    &__image {
+      img {
+        width: 65%;
+        min-width: 25em;
+      }
+    }
+
+    &__tutorial-box {
+      iframe {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        width: 28em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 478px) {
+    &__tutorial-box {
+      iframe {
+        width: 25em;
+        height: 15em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 424px) {
+    &__tutorial-box {
+      iframe {
+        width: 23em;
+        height: 14em;
+      }
+    }
+
+    &__image {
+      img {
+        min-width: 22em;
+      }
     }
   }
 }

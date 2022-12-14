@@ -21,23 +21,23 @@
       </div>
       <!-- CSS code box end   -->
 
-      <div class="code__download">
+      <!-- <div class="code__download">
         <a
           href="https://drive.google.com/file/d/1HUO7-w9by8PHKAcefupbHJWUr7nLLhwC/view?usp=share_link"
           download="3DSphere"
           >Download Code</a
         >
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import Prism from "~/plugins/prism";
-import "prismjs/components/prism-jsx";
+import Prism from '~/plugins/prism';
+import 'prismjs/components/prism-jsx';
 
 export default {
-  name: "Code",
+  name: 'Code',
   props: {
     codeData: {
       type: Object,
@@ -55,21 +55,21 @@ export default {
   top: 0;
   padding: 0 2%;
   color: #ffffff;
+  margin-bottom: 5em;
 
   &__box {
     margin-top: 2em;
-    width: 45vw;
+    width: 50%;
     h2 {
-      font-family: "Righteous", cursive;
+      font-family: 'Righteous', cursive;
       font-size: 1.33em;
       font-weight: 400;
       padding: 0.5em 0;
     }
     pre {
-      width: 45vw;
+      width: 100%;
       height: 38em;
       border-radius: 0.2em;
-      min-width: 32em;
       overflow: scroll;
       margin: 0;
 
@@ -92,6 +92,20 @@ export default {
       &::-webkit-scrollbar-thumb:vertical {
         background: linear-gradient(to bottom, #d90ae8, #e96443);
         border-radius: 0.625em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__box {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__box {
+      pre {
+        min-width: 32em;
       }
     }
   }
