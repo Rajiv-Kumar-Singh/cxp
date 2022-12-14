@@ -35,6 +35,10 @@
             </div>
           </div>
         </div>
+
+        <div class="post__carousel-component">
+          <MainCarousel />
+        </div>
       </div>
       <div class="post__all-uploads">
         <AllUploads />
@@ -46,6 +50,7 @@
 <script>
 // importing components
 import AllUploads from '../components/AllUploads.vue';
+import MainCarousel from '../components/MainCarousel.vue';
 
 // importing thumbnails
 import reactShpere from '../assets/thumbnails/3d-react-sphere.jpg';
@@ -108,6 +113,7 @@ export default {
   },
   components: {
     AllUploads,
+    MainCarousel,
   },
 };
 </script>
@@ -158,14 +164,26 @@ export default {
   &__content-container {
     position: relative;
     top: 0;
-    width: 65vw;
+    width: 100%;
     padding: 1em;
     margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__carousel-component {
+    // border: 3px solid red;
+    width: 35vw;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #131624;
   }
 
   &__recent-uploads {
     position: relative;
     top: 0;
+    width: 60%;
   }
 
   &__recent-uploads-header {
@@ -345,6 +363,41 @@ export default {
     img {
       width: 2em;
       height: auto;
+    }
+  }
+
+  @media screen and (max-width: 1143px) {
+    &__content-container {
+      flex-direction: column;
+    }
+
+    &__recent-uploads {
+      width: 100%;
+    }
+
+    &__carousel-component {
+      margin-top: 3em;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__header {
+      span {
+        font-size: 3em;
+      }
+    }
+
+    &__content-container {
+      margin-top: 2.5em;
+    }
+
+    &__recent-uploads-header {
+      span {
+        &::after {
+          width: 266%;
+        }
+      }
     }
   }
 }

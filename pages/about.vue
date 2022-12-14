@@ -24,7 +24,7 @@
       </p>
     </div>
     <div class="about__social">
-      <span>Follow CXP On</span>
+      <span>Follow Codemmit On</span>
       <div class="about__social-icons">
         <a href="https://www.instagram.com/cxp_codes/" target="_blank">
           <img src="~/assets/icon/instagram.svg" alt="ig icon" />

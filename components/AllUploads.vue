@@ -138,7 +138,7 @@ export default {
 .uploads {
   position: relative;
   top: 0;
-  width: 65vw;
+  width: 60%;
   padding-bottom: 5em;
 
   &__container {
@@ -192,7 +192,7 @@ export default {
     margin-top: 3em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -223,7 +223,9 @@ export default {
 
   &__card {
     position: relative;
-    width: 18em;
+    width: 32%;
+    max-width: 20em;
+    min-width: 14em;
     height: 21em;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
