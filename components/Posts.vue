@@ -21,6 +21,13 @@
                     <p>{{ card.description }}</p>
                   </div>
                 </NuxtLink>
+                <div class="post__spinner">
+                  <orbit-spinner
+                    :animation-duration="1200"
+                    :size="55"
+                    :color="'#ff1d5e'"
+                  />
+                </div>
                 <div class="post__card-btn-box">
                   <a
                     class="post__button"
@@ -32,6 +39,7 @@
                   </a>
                 </div>
               </div>
+              <!-- <div class="post__card-overlay"></div> -->
             </div>
           </div>
         </div>
@@ -58,6 +66,9 @@ import VideoControl from '../assets/thumbnails/video-controls.jpg';
 import gradientButton from '../assets/thumbnails/gradient-button.jpg';
 import htmlSphere from '../assets/thumbnails/html-text-sphere.jpg';
 import AdvTypewriter from '../assets/thumbnails/adv-typewriter.jpg';
+
+// importing spinner
+import { OrbitSpinner } from 'epic-spinners';
 
 export default {
   name: 'Post',
@@ -114,6 +125,22 @@ export default {
   components: {
     AllUploads,
     MainCarousel,
+    OrbitSpinner,
+  },
+  mounted() {
+    const card = document.getElementsByClassName('post__card-route');
+    let i;
+    for (i = 0; i < card.length; i++) {
+      card[i].addEventListener('click', function () {
+        const spinner = this.nextElementSibling;
+        console.log(spinner, 'content');
+        if (spinner.style.display === 'flex') {
+          spinner.style.display = 'none';
+        } else {
+          spinner.style.display = 'flex';
+        }
+      });
+    }
   },
 };
 </script>
@@ -173,7 +200,6 @@ export default {
   }
 
   &__carousel-component {
-    // border: 3px solid red;
     width: 35vw;
     padding: 1em;
     border-radius: 0.5em;
@@ -287,6 +313,17 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
   }
 
   &__card-route {
