@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-16',
       viewport: 'width=390, initial-scale=1',
-      title: 'Codemmit | coding blogs',
+      title: 'Codemmit',
       meta: [
         { property: 'og:description', content: 'Codemmit is an coding blog website which provide free source code and templates for web and app developement.' },
         // { property: 'og:image', content: 'https://dyst2.netlify.app/_nuxt/arbitrum.42604ba3.png' }
