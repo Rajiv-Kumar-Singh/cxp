@@ -11,12 +11,19 @@
             <NuxtLink :to="`${card.codePageLink}`" class="uploads__card-route">
               <div class="uploads__card-thumbnail">
                 <img :src="`${card.thumbnail}`" alt="loading image" />
-                <p>{{ card.title }}</p>
+                <!-- <p>{{ card.title }}</p> -->
               </div>
               <div class="uploads__card-description">
                 <p>{{ card.description }}</p>
               </div>
             </NuxtLink>
+            <div class="post__spinner">
+              <orbit-spinner
+                :animation-duration="1200"
+                :size="55"
+                :color="'#ff1d5e'"
+              />
+            </div>
             <div class="uploads__card-btn-box">
               <a
                 class="uploads__button"
@@ -46,6 +53,9 @@ import SkillBar from '../assets/thumbnails/skill-bar.jpg';
 import ScaleHover from '../assets/thumbnails/scale-hover-effect.jpg';
 import LikeBtn from '../assets/thumbnails/like-btn.jpg';
 
+// importing spinner
+import { OrbitSpinner } from 'epic-spinners';
+
 export default {
   name: 'Post',
   data() {
@@ -54,78 +64,70 @@ export default {
         {
           codePageLink: '/reactsphere',
           thumbnail: `${reactShpere}`,
-          title: 'Create 3D Rotating Text Sphere Using React.js',
-          description:
-            'Learn how to create awesome 3D rotating text sphere using React.js and package named TagCloud.',
+          title: '',
+          description: 'Create 3D Rotating Text Sphere Using React.js',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
         {
           codePageLink: '/customVideoButton',
           thumbnail: `${VideoControl}`,
-          title:
-            'Create Custom Play/Pause button using HTML, CSS and JavaScript',
+          title: '',
           description:
-            'Learn to create custom HTML video controls ( play / pause ) button using HTML, CSS and JavaScript.',
+            'Create Custom Play/Pause button using HTML, CSS and JavaScript',
           youtubeLink: 'https://youtu.be/QSrvL8VU3fE',
         },
         {
           codePageLink: '/gradientButton',
           thumbnail: `${gradientButton}`,
-          title:
-            'Create CSS Gradient Buttons with Hover Effects Using HTML and CSS',
+          title: '',
           description:
-            'In this Blog we will create three awesome buttons with gradient border and hover effect using HTML and CSS only.',
+            'Create CSS Gradient Buttons with Hover Effects Using HTML and CSS',
           youtubeLink: 'https://youtu.be/o5uV7fxh9To',
         },
         {
           codePageLink: '/htmlSphere',
           thumbnail: `${htmlSphere}`,
-          title:
-            'Create 3D Rotating Text Sphere Using HTML, CSS, JavaScript and TagCloud.js',
+          title: '',
           description:
-            'Learn to create 3D rotating text sphere using only HTML, CSS and JavaScript',
+            'Create 3D Rotating Text Sphere Using HTML, CSS, JavaScript and TagCloud.js',
           youtubeLink: 'https://youtu.be/Y4Jl1Ql9qFI',
         },
         {
           codePageLink: '/advanceTypewriter',
           thumbnail: `${AdvTypewriter}`,
-          title:
-            'Create Advanced Typewriter Effect Using HTML CSS & JavaScript',
+          title: '',
           description:
-            'In this blog we will create an awesome Typewriter Effect using HTML CSS and JavaScript.',
+            'Create Advanced Typewriter Effect Using HTML CSS & JavaScript',
           youtubeLink: 'https://youtu.be/7Udqo7dbi5U',
         },
         {
           codePageLink: '/blob',
           thumbnail: `${Blob}`,
-          title: 'Create Blob Shape With Animation Using Only HTML & CSS',
-          description:
-            'In this blog we will create Blob shape with animation using HTML & CSS only.',
+          title: '',
+          description: 'Create Blob Shape With Animation Using Only HTML & CSS',
           youtubeLink: 'https://youtu.be/AtFRzx4Dj3w',
         },
         {
           codePageLink: '/skillbar',
           thumbnail: `${SkillBar}`,
-          title: 'Animate Skill Bar On Scroll Using HTML, CSS & JavaScript',
+          title: '',
           description:
-            'In this blog we will be adding scroll animation to skill bars using HTML, CSS & JavaScript',
+            'Animate Skill Bar On Scroll Using HTML, CSS & JavaScript',
           youtubeLink: 'https://youtu.be/azIXOvg0b_U',
         },
         {
           codePageLink: '/scaleHover',
           thumbnail: `${ScaleHover}`,
-          title:
-            'Create Advanced Text Hover Effect Using HTML CSS & JavaScript',
+          title: '',
           description:
-            'In this blog you will learn to create an advance Hover Text Effect Using HTML, CSS and JavaScript',
+            'Create Advanced Text Hover Effect Using HTML CSS & JavaScript',
           youtubeLink: 'https://youtu.be/D6fv9fzi6I8',
         },
         {
           codePageLink: '/likeBtn',
           thumbnail: `${LikeBtn}`,
-          title: 'Create Like Button Using HTML, CSS and JavaScript',
-          description:
-            'In this blog you will learn to create Like button using HTML, CSS and JavaScript',
+          title: '',
+          description: 'Create Like Button Using HTML, CSS and JavaScript',
           youtubeLink: 'https://youtu.be/1AE3qtKA79w',
         },
       ],
@@ -259,6 +261,15 @@ export default {
     }
   }
 
+  // change color of Card text upon hover
+  &__card:hover &__card-description {
+    background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+      linear-gradient(to right, #e96443, #904e95) border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   &__card-box {
     position: relative;
     width: 100%;
@@ -276,6 +287,17 @@ export default {
       height: 100%;
       z-index: 8;
     }
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
   }
 
   &__card-thumbnail {
@@ -306,7 +328,7 @@ export default {
     align-items: center;
 
     p {
-      font-weight: 100;
+      font-weight: 600;
     }
   }
 

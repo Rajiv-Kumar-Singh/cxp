@@ -15,9 +15,10 @@
                 <NuxtLink :to="`${card.codePageLink}`" class="post__card-route">
                   <div class="post__card-thumbnail">
                     <img :src="`${card.thumbnail}`" alt="loading image" />
-                    <p>{{ card.title }}</p>
+                    <!-- <p>{{ card.title }}</p> -->
                   </div>
                   <div class="post__card-description">
+                    <!-- <p>{{ card.title }}</p> -->
                     <p>{{ card.description }}</p>
                   </div>
                 </NuxtLink>
@@ -77,45 +78,40 @@ export default {
         {
           codePageLink: '/reactsphere',
           thumbnail: `${reactShpere}`,
-          title: 'Create 3D Rotating Text Sphere Using React.js',
-          description:
-            'Learn how to create awesome 3D rotating text sphere using React.js and package named TagCloud.',
+          title: '',
+          description: 'Create 3D Rotating Text Sphere Using React.js',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
         {
           codePageLink: '/customVideoButton',
           thumbnail: `${VideoControl}`,
-          title:
-            'Create Custom Play/Pause button using HTML, CSS and JavaScript',
+          title: '',
           description:
-            'Learn to create custom HTML video controls ( play / pause ) button using HTML, CSS and JavaScript.',
+            'Create Custom Play/Pause button using HTML, CSS and JavaScript',
           youtubeLink: 'https://youtu.be/QSrvL8VU3fE',
         },
         {
           codePageLink: '/gradientButton',
           thumbnail: `${gradientButton}`,
-          title:
-            'Create CSS Gradient Buttons with Hover Effects Using HTML and CSS',
+          title: '',
           description:
-            'In this Blog we will create three awesome buttons with gradient border and hover effect using HTML and CSS only.',
+            'Create CSS Gradient Buttons with Hover Effects Using HTML and CSS',
           youtubeLink: 'https://youtu.be/o5uV7fxh9To',
         },
         {
           codePageLink: '/htmlSphere',
           thumbnail: `${htmlSphere}`,
-          title:
-            'Create 3D Rotating Text Sphere Using HTML, CSS, JavaScript and TagCloud.js',
+          title: '',
           description:
-            'Learn to create 3D rotating text sphere using only HTML, CSS and JavaScript',
+            'Create 3D Rotating Text Sphere Using HTML, CSS, JavaScript and TagCloud.js',
           youtubeLink: 'https://youtu.be/Y4Jl1Ql9qFI',
         },
         {
           codePageLink: '/advanceTypewriter',
           thumbnail: `${AdvTypewriter}`,
-          title:
-            'Create Advanced Typewriter Effect Using HTML CSS & JavaScript',
+          title: '',
           description:
-            'In this blog we will create an awesome Typewriter Effect using HTML CSS and JavaScript.',
+            'Create Advanced Typewriter Effect Using HTML CSS & JavaScript',
           youtubeLink: 'https://youtu.be/7Udqo7dbi5U',
         },
       ],
@@ -280,7 +276,7 @@ export default {
 
   &__card {
     position: relative;
-    min-width: 18em;
+    min-width: 16em;
     height: 21em;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
@@ -308,21 +304,19 @@ export default {
     }
   }
 
+  // change color of Card text upon hover
+  &__card:hover &__card-description {
+    background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+      linear-gradient(to right, #e96443, #904e95) border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   &__card-box {
     position: relative;
     width: 100%;
     height: 100%;
-  }
-
-  &__spinner {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background: #00000080;
   }
 
   &__card-route {
@@ -338,6 +332,17 @@ export default {
     }
   }
 
+  &__spinner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
+  }
+
   &__card-thumbnail {
     position: relative;
 
@@ -348,14 +353,14 @@ export default {
       border-top-right-radius: 0.5em;
     }
 
-    p {
-      position: absolute;
-      bottom: 0;
-      padding: 0.5em;
-      max-height: 5em;
-      font-weight: 600;
-      background: rgb(0 0 0 / 81%);
-    }
+    // p {
+    //   position: absolute;
+    //   bottom: 0;
+    //   padding: 0.5em;
+    //   max-height: 5em;
+    //   font-weight: 600;
+    //   background: rgb(0 0 0 / 81%);
+    // }
   }
 
   &__card-description {
@@ -366,7 +371,7 @@ export default {
     align-items: center;
 
     p {
-      font-weight: 100;
+      font-weight: 600;
     }
   }
 
