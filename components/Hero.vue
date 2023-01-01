@@ -5,7 +5,7 @@
         <p>
           <!-- All! Just <br />
           For Pixels -->
-          <span> Namaste From Codemmit </span>
+          <span> Welcome To Codemmit </span>
         </p>
         <p class="hero__description">
           Explore free aspiring content for your projects.
