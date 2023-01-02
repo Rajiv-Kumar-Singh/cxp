@@ -23,6 +23,7 @@ export default {
         title:
           'Create Advanced Text Hover Effect Using HTML CSS and JavaScript',
         image: ScaleHover,
+        video: '',
         description:
           'Hello Developers, In this blog you will learn to create an awesome advanced Text Hover Effect Using HTML, CSS and JavaScript',
         info: [

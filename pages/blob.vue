@@ -22,6 +22,7 @@ export default {
       content: {
         title: 'Create Blob Shape With Animation Using Only HTML & CSS',
         image: blob,
+        video: '',
         description:
           'Hello Developers, In this blog you will learn to create an awesome typewriter effect using HTML, CSS and JavaScript',
         info: [

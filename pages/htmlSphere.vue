@@ -23,6 +23,7 @@ export default {
         title:
           'Create 3D Rotating Text Sphere Using HTML, CSS, JavaScript and TagCloud.js',
         image: threeDSphere,
+        video: '',
         description:
           'Hello Developers, In this blog you will learn to create this awesome 3D rotating text sphere using HTML, CSS, JavaScript and a package named TagCloud.js.',
         info: [

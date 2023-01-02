@@ -1,0 +1,12 @@
+<svg width="512" height="376.83" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" fill="#ffffff">
+ <defs>
+  <linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_2">
+   <stop offset="0" stop-color="#d90ae8"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#e96443"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path fill="url(#svg_2)" id="svg_1" d="m355.12,372.7a12.026,12.026 0 0 1 -17.09,1.06c-5,-4.47 -5.46,-12.2 -1.04,-17.25l136.05,-155.82l-460.89,0c-6.71,0 -12.15,-5.5 -12.15,-12.28c0,-6.77 5.44,-12.27 12.15,-12.27l460.9,0l-136.06,-155.82c-4.42,-5.05 -3.96,-12.78 1.04,-17.25c5.01,-4.47 12.66,-4 17.09,1.05l153.67,176c4.17,4.55 4.33,11.64 0.17,16.39l-153.84,176.19z" fill-rule="nonzero"/>
+ </g>
+</svg>

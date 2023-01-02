@@ -6,33 +6,34 @@
 </template>
 
 <script>
-import SourceCode from "../components/SourceCode.vue";
-import Code from "~/components/Code.vue";
+import SourceCode from '../components/SourceCode.vue';
+import Code from '~/components/Code.vue';
 
 // import thumbnails
-import threeDSphere from "~/assets/thumbnails/3d-react-sphere.jpg";
+import threeDSphere from '~/assets/thumbnails/3d-react-sphere.jpg';
 
 // import code file
-import codes from "~/assets/codes/reactTextSphere.js";
+import codes from '~/assets/codes/reactTextSphere.js';
 
 export default {
-  name: "ReactSphere",
+  name: 'ReactSphere',
   data() {
     return {
       content: {
-        title: "Create 3D Rotating Text Sphere Using React.js",
+        title: 'Create 3D Rotating Text Sphere Using React.js',
         image: threeDSphere,
+        video: '',
         description:
-          "Hello Developers, In this blog you will learn to create this awesome 3D rotating text sphere using React.js and a package named TagCloud.js.",
+          'Hello Developers, In this blog you will learn to create this awesome 3D rotating text sphere using React.js and a package named TagCloud.js.',
         info: [
           {
-            text: "Checkout the source code below and take reference from video to create this rotating text cloud.",
+            text: 'Checkout the source code below and take reference from video to create this rotating text cloud.',
           },
           {
-            text: "Checkout TagCloud.js Here : https://www.npmjs.com/package/TagCloud",
+            text: 'Checkout TagCloud.js Here : https://www.npmjs.com/package/TagCloud',
           },
         ],
-        youtubeVideo: "https://www.youtube.com/embed/5jlDHSqjZcc",
+        youtubeVideo: 'https://www.youtube.com/embed/5jlDHSqjZcc',
       },
       codeContent: {
         htmlSyntax: false,

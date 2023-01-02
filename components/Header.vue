@@ -13,6 +13,7 @@
       </div>
       <div class="header__links" id="header__nav-links">
         <NuxtLink to="/"> HOME </NuxtLink>
+        <NuxtLink to="/explore"> EXPLORE </NuxtLink>
         <NuxtLink to="/#post"> POSTS </NuxtLink>
         <NuxtLink to="/about"> ABOUT </NuxtLink>
         <NuxtLink to="/contact"> CONTACT </NuxtLink>

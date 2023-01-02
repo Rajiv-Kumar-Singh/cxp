@@ -6,32 +6,31 @@
 </template>
 
 <script>
-import SourceCode from '../components/SourceCode.vue';
+import SourceCode from '~/components/SourceCode.vue';
 import Code from '~/components/Code.vue';
 
 // import thumbnails
-import gradientButton from '~/assets/thumbnails/gradient-button.jpg';
+import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 
 // import code file
-import codes from '~/assets/codes/gradientButtons.js';
+import codes from '~/assets/codes/HTML/Navbar/htmlNavbar.js';
 
 export default {
-  name: 'ReactSphere',
+  name: 'htmlNavbar',
   data() {
     return {
       content: {
-        title:
-          'Create CSS Gradient Buttons with Hover Effects Using HTML and CSS.',
-        image: gradientButton,
-        video: '',
+        title: 'Create Responsive Navbar With Animation',
+        image: '',
+        video: htmlNavbar,
         description:
-          'Hello Developers, In this blog we will be creating 3 gradient button with hover effect using HTML and CSS only',
+          'Hello Developers, In this blog you will learn to create an simple navbar with animation using HTML, CSS and JavaScript',
         info: [
           {
-            text: 'Checkout the source code below and take reference from video to create this',
+            text: 'Checkout the source code below and take reference from video to create this.',
           },
         ],
-        youtubeVideo: 'https://www.youtube.com/embed/o5uV7fxh9To',
+        youtubeVideo: 'https://www.youtube.com/embed/7Udqo7dbi5U',
       },
       codeContent: {
         htmlSyntax: true,

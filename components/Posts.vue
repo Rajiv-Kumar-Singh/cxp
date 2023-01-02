@@ -1,5 +1,5 @@
 <template>
-  <div class="post" id="post">
+  <div class="post">
     <div class="post__container">
       <div class="post__header"><span>All POSTS</span></div>
 
@@ -36,7 +36,7 @@
                     target="_blank"
                   >
                     <span>Watch on</span>
-                    <img src="../assets/icon/youtube.svg" alt="loading image" />
+                    <img src="../assets/icon/youtube.svg" alt="yotube icon" />
                   </a>
                 </div>
               </div>

@@ -5,7 +5,16 @@
         <span>{{ contentData.title }}</span>
       </h1>
       <div class="source-code__image">
-        <img :src="`${contentData.image}`" alt="thumbnail" />
+        <img
+          :src="`${contentData.image}`"
+          v-if="contentData.image != ''"
+          alt="thumbnail"
+        />
+        <div class="source-code__video-box" v-if="contentData.video != ''">
+          <video autoplay loop muted>
+            <source :src="`${contentData.video}`" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div class="source-code__intro-text">
         <span> {{ contentData.description }}</span>
@@ -128,6 +137,25 @@ export default {
 
     iframe {
       border-radius: 0.5em;
+    }
+  }
+
+  &__video-box {
+    position: relative;
+    max-width: 45em;
+    width: 100%;
+    // overflow: hidden;
+    // padding-top: 56.25%;
+
+    video {
+      //   position: absolute;
+      //   top: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   border: none;
+      position: relative;
+      width: 100%;
+      height: auto;
     }
   }
 

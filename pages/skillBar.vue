@@ -22,6 +22,7 @@ export default {
       content: {
         title: 'Animate Skill Bar On Scroll Using HTML, CSS and JavaScript',
         image: SkillBar,
+        video: '',
         description:
           'Hello Developers, In this blog we will be adding scroll animtion to skill bar using aos library',
         info: [

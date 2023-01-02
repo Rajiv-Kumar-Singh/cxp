@@ -1,5 +1,5 @@
 <template>
-  <div class="uploads" id="all-uploads">
+  <div class="uploads" id="post">
     <div class="uploads__container">
       <div class="uploads__header">
         <span>All Uploads</span>
@@ -35,6 +35,14 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="uploads__card uploads__card--last-card">
+          <p>
+            <NuxtLink to="/explore">
+              Explore More
+              <img src="../assets/icon/arrow-right.svg" alt="arrow icon" />
+            </NuxtLink>
+          </p>
         </div>
       </div>
     </div>
@@ -133,6 +141,9 @@ export default {
       ],
     };
   },
+  components: {
+    OrbitSpinner,
+  },
 };
 </script>
 
@@ -140,7 +151,7 @@ export default {
 .uploads {
   position: relative;
   top: 0;
-  width: 60%;
+  width: 100%;
   padding-bottom: 5em;
 
   &__container {
@@ -190,50 +201,56 @@ export default {
     position: relative;
     top: 0;
     width: 100%;
-    height: 50em;
+    // height: 50em;
     margin-top: 3em;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
     overflow: scroll;
     scroll-behavior: smooth;
-    // overflow-x: hidden;
     overflow: scroll;
     gap: 1em;
     padding: 1em;
     background: #2c2a2a80;
     border-radius: 0.5em;
 
+    // Hide Scroll bars
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
     &::-webkit-scrollbar {
-      height: 0.15em;
-      width: 0.15em;
-    }
-    &::-webkit-scrollbar-track {
-      background: #203258;
+      // height: 0.15em;
+      // width: 0.15em;
+      display: none;
     }
 
-    &::-webkit-scrollbar-thumb {
-      background: #203258;
-    }
+    // &::-webkit-scrollbar-track {
+    //   background: #203258;
+    // }
 
-    &::-webkit-scrollbar-thumb:vertical {
-      background: linear-gradient(to right, #d90ae8, #e96443);
-      border-radius: 0.625em;
-    }
+    // &::-webkit-scrollbar-thumb {
+    //   background: #203258;
+    // }
 
-    &::-webkit-scrollbar-thumb:horizontal {
-      background: linear-gradient(to right, #d90ae8, #e96443);
-      border-radius: 0.625em;
-    }
+    // &::-webkit-scrollbar-thumb:vertical {
+    //   background: linear-gradient(to right, #d90ae8, #e96443);
+    //   border-radius: 0.625em;
+    // }
+
+    // &::-webkit-scrollbar-thumb:horizontal {
+    //   background: linear-gradient(to right, #d90ae8, #e96443);
+    //   border-radius: 0.625em;
+    // }
   }
 
   &__card {
     position: relative;
     width: 32%;
-    max-width: 20em;
+    max-width: 16em;
     min-width: 16em;
     height: 21em;
     color: #ffffff;
@@ -360,6 +377,39 @@ export default {
 
     img {
       width: 2em;
+      height: auto;
+    }
+  }
+
+  // Last card stlying
+  &__card--last-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    &:hover img {
+      position: relative;
+      left: 5px;
+    }
+
+    a {
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+        linear-gradient(to right, #e96443, #904e95) border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    img {
+      margin-left: 10px;
+      width: 1em;
       height: auto;
     }
   }

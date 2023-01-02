@@ -10,12 +10,12 @@
         <p class="hero__description">
           Explore free aspiring content for your projects.
         </p>
-        <a href="#all-uploads">
-          <button class="hero__primary-btn">Explore</button></a
-        >
+        <NuxtLink to="/explore">
+          <button class="hero__primary-btn">Explore</button>
+        </NuxtLink>
         <NuxtLink to="/contact">
-          <button class="hero__secondary-btn">Contact Me</button></NuxtLink
-        >
+          <button class="hero__secondary-btn">Contact Me</button>
+        </NuxtLink>
         <div class="hero__arrow-icon">
           <span>
             <img src="~/assets/icon/arrow-down.svg" alt="arrow" />

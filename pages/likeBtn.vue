@@ -22,6 +22,7 @@ export default {
       content: {
         title: 'Create Like Button Using HTML, CSS and JavaScript',
         image: ScaleHover,
+        video: '',
         description:
           'Hello Developers, In this blog you will learn to create an Like button, which when clicked it becomes red and if clicked again its color become grey',
         info: [
