@@ -142,5 +142,17 @@ export default {
       letter-spacing: 0.04em;
     }
   }
+
+  @media screen and (max-width: 839px) {
+    width: 100%;
+
+    &__tags {
+      display: flex;
+
+      a {
+        width: fit-content;
+      }
+    }
+  }
 }
 </style>

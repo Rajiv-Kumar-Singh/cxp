@@ -203,5 +203,9 @@ export default {
       line-height: 0.5;
     }
   }
+
+  @media screen and (max-width: 839px) {
+    min-width: 0;
+  }
 }
 </style>

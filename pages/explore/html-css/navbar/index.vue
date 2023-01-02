@@ -65,5 +65,25 @@ export default {
     margin-left: 5%;
     // border: 3px solid yellow;
   }
+
+  @media screen and (max-width: 839px) {
+    &__sidebar-container {
+      position: relative;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__sidebar-container {
+      width: 100%;
+    }
+
+    &__content-outer-container {
+      width: 80%;
+      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
 }
 </style>
