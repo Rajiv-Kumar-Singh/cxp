@@ -5,27 +5,33 @@
     </div>
     <div class="about__description">
       <p>
-        Codemmit provide coding content related to full-stack development,
-        mostly related to front-end development. Here i post FREE Source Code
-        and video tutorial for my
-        <a
+        Codemmit built to provide usefull and re-useable components with source
+        code, These components are frequently used for frontend development of
+        web and mobile apps.
+        <!-- <a
           href="https://www.youtube.com/channel/UCkNUMuNBp1-037oHEKs-G9Q"
           target="_blank"
           >YouTube Channel</a
-        >
+        > -->
       </p>
       <p>
         You are free to use content shared on this website without any
         restrictions.
       </p>
       <p>
-        I hope these blog posts are helpful for you, if you have any queries or
+        I hope these posts are helpful for you, if you have any queries or
         suggestions you can <NuxtLink to="/"> Contact me </NuxtLink>
       </p>
     </div>
     <div class="about__social">
       <span>Follow Codemmit On</span>
       <div class="about__social-icons">
+        <a
+          href="https://www.youtube.com/channel/UCkNUMuNBp1-037oHEKs-G9Q"
+          target="_blank"
+        >
+          <img src="~/assets/icon/youtube.svg" alt="youtube icon" />
+        </a>
         <a href="https://www.instagram.com/cxp_codes/" target="_blank">
           <img src="~/assets/icon/instagram.svg" alt="ig icon" />
         </a>

@@ -17,6 +17,7 @@ import ExploreCards from '~/components/ExploreCards';
 
 // importing video thumbnails
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
+import htmlNavbarShadowAniamtion from '~/assets/gifs/navbars/navbar-shadow-animation.mp4';
 
 export default {
   name: 'HtmlCssNavbars',
@@ -29,6 +30,15 @@ export default {
           title: 'Create Responsive Navbar With Animation',
           description:
             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
+          youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+        },
+        {
+          codePageLink:
+            '/explore/html-css/navbar/code/html-navbar-shadow-animation',
+          thumbnail: `${htmlNavbarShadowAniamtion}`,
+          title: 'Create Animated Shadow below Navbar',
+          description:
+            'Using only HTML and CSS you can easily create shadow animation below Navbar.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
       ],
