@@ -13,7 +13,7 @@
             </video>
           </div>
           <div class="explore-cards__content-box">
-            <p>{{ card.title }}</p>
+            <p class="explore-cards__content-title">{{ card.title }}</p>
             <div class="explore-cards__text-description">
               <p>
                 {{ card.description }}
@@ -132,11 +132,12 @@ export default {
   // Description styling
   &__content-box {
     color: #ffffff;
+  }
 
-    p {
-      font-size: 1.33em;
-      font-size: 200;
-    }
+  &__content-title {
+    letter-spacing: 0.05em;
+    font-size: 1.33em;
+    font-size: 200;
   }
 
   &__text-description {
