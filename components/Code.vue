@@ -4,19 +4,19 @@
       <div class="code__box">
         <h2>HTML / JSX</h2>
         <pre>
-        <code :class="(codeData.htmlSyntax) ? 'language-html' : 'language-jsx'">
-        {{codeData.htmlCode}}
-        </code>
-      </pre>
+          <code :class="(codeData.htmlSyntax) ? 'language-html' : 'language-jsx'">
+            {{codeData.htmlCode}}
+          </code>
+        </pre>
       </div>
 
       <!-- CSS Code Box -->
       <div class="code__box">
         <h2>CSS Code</h2>
         <pre>
-        <code class="language-css">
-          {{codeData.cssCode}}
-        </code>
+            <code class="language-css">
+              {{codeData.cssCode}}
+            </code>
         </pre>
       </div>
       <!-- CSS code box end   -->
@@ -57,6 +57,13 @@ export default {
   color: #ffffff;
   margin-bottom: 5em;
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
   &__box {
     margin-top: 2em;
     width: 50%;
@@ -64,11 +71,14 @@ export default {
       font-family: 'Righteous', cursive;
       font-size: 1.33em;
       font-weight: 400;
-      padding: 0.5em 0;
+      padding: 0.5em 0.5em;
+      background-color: #1f1f1f;
+      border-top-left-radius: 0.2em;
+      border-top-right-radius: 0.2em;
     }
     pre {
       width: 100%;
-      height: 38em;
+      height: 35em;
       border-radius: 0.2em;
       overflow: scroll;
       margin: 0;
@@ -93,10 +103,30 @@ export default {
         background: linear-gradient(to bottom, #d90ae8, #e96443);
         border-radius: 0.625em;
       }
+
+      code {
+        font-size: 0.875em;
+        line-height: 1;
+      }
     }
   }
 
+  @media screen and (max-width: 937px) {
+    &__box {
+      pre {
+        height: 20em;
+        code {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
+    &__container {
+      display: inline-block;
+      width: 100%;
+    }
+
     &__box {
       width: 100%;
     }
@@ -105,7 +135,7 @@ export default {
   @media screen and (min-width: 768px) {
     &__box {
       pre {
-        min-width: 32em;
+        min-width: 23em;
       }
     }
   }
