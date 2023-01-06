@@ -2,7 +2,8 @@
   <div class="header">
     <div class="header__logo">
       <NuxtLink to="/">
-        <span>Codemmit</span>
+        <!-- <span>Codemmit</span> -->
+        <img src="~/assets/logo/codemmit-logo.svg" alt="" />
       </NuxtLink>
     </div>
     <div class="header__navigation-links">
@@ -77,14 +78,18 @@ export default {
   &__logo {
     a {
       text-decoration: none;
-      span {
-        font-size: 3em;
-        font-weight: 600;
-        background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
-          linear-gradient(to right, #e96443, #904e95) border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      // span {
+      //   font-size: 3em;
+      //   font-weight: 600;
+      //   background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+      //     linear-gradient(to right, #e96443, #904e95) border-box;
+      //   -webkit-background-clip: text;
+      //   -webkit-text-fill-color: transparent;
+      //   background-clip: text;
+      // }
+      img {
+        width: 10em;
+        height: auto;
       }
     }
   }
