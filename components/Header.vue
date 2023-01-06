@@ -150,7 +150,13 @@ export default {
       width: 100%;
       height: 0.1em;
       border-radius: 0.05em;
-      background: linear-gradient(to right, #d90ae8, #e96443);
+      // background: linear-gradient(to right, #d90ae8, #e96443);
+      background: linear-gradient(
+        90.11deg,
+        #ff5722 0.13%,
+        #fdb703 92.62%,
+        rgba(245, 121, 59, 0) 92.63%
+      );
     }
   }
 

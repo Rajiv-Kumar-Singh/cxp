@@ -31,6 +31,39 @@ html {
 body {
   background-color: #191d30;
 }
+
+// Adding styling to browser vertical scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.1em grey;
+  border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #ff5722 0.13%,
+    #fdb703 92.62%,
+    rgba(245, 121, 59, 0) 92.63%
+  );
+  border-radius: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    90.11deg,
+    #ff5722 0.13%,
+    #fdb703 92.62%,
+    rgba(245, 121, 59, 0) 92.63%
+  );
+}
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,500&family=Righteous&family=Teko:wght@300;400;500;600;700&display=swap');
 // Card color:  #353847
 </style>
