@@ -190,7 +190,7 @@ export default {
 
   @media screen and (max-width: 768px) {
     &__logo {
-      font-size: 0.65em;
+      font-size: 1em;
     }
     &__hamburger-icon {
       display: flex;
