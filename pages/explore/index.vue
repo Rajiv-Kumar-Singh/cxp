@@ -17,6 +17,7 @@ import ExploreCards from '~/components/ExploreCards';
 
 // importing video thumbnails
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
+import htmlBottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
 
 export default {
   name: 'Explore',
@@ -29,6 +30,14 @@ export default {
           title: 'Create Responsive Navbar With Animation',
           description:
             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
+          youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+        },
+        {
+          codePageLink: '/explore/html-css/navbar/code/bottomNavbar',
+          thumbnail: `${htmlBottomNavbar}`,
+          title: 'Create Bottom Navigation Menu',
+          description:
+            'Create bottom navigation menu for mobile devices using HTML, CSS and Javascript with tab animation.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
       ],

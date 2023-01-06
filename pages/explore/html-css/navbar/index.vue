@@ -18,6 +18,7 @@ import ExploreCards from '~/components/ExploreCards';
 // importing video thumbnails
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 import htmlNavbarShadowAniamtion from '~/assets/gifs/navbars/navbar-shadow-animation.mp4';
+import bottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
 
 export default {
   name: 'HtmlCssNavbars',
@@ -39,6 +40,14 @@ export default {
           title: 'Create Animated Shadow below Navbar',
           description:
             'Using only HTML and CSS you can easily create shadow animation below Navbar.',
+          youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+        },
+        {
+          codePageLink: '/explore/html-css/navbar/code/bottom-navigation-menu',
+          thumbnail: `${bottomNavbar}`,
+          title: 'Create Bottom Navigation Menu',
+          description:
+            'Create bottom navigation menu for mobile devices using HTML, CSS and Javascript with tab animation.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
       ],
