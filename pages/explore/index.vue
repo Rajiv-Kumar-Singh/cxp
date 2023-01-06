@@ -33,7 +33,7 @@ export default {
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
         {
-          codePageLink: '/explore/html-css/navbar/code/bottomNavbar',
+          codePageLink: '/explore/html-css/navbar/code/bottom-navigation-menu',
           thumbnail: `${htmlBottomNavbar}`,
           title: 'Create Bottom Navigation Menu',
           description:
