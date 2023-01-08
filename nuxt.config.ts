@@ -2,12 +2,12 @@
 export default defineNuxtConfig({
    app: {
     head: {
-      charset: 'utf-16',
+      charset: 'utf-8',
       viewport: 'width=390, initial-scale=1',
       title: 'Codemmit',
       meta: [
-        { property: 'og:description', content: 'Codemmit is an coding blog website which provide free source code and templates for web and app developement.' },
-        // { property: 'og:image', content: 'https://dyst2.netlify.app/_nuxt/arbitrum.42604ba3.png' }
+        // <meta name="description" content="My amazing site">
+        { name: 'description', content: 'Codemmit provide ready to use components built using HTML, CSS, JavaScript, React.js or Vue.js. Codemmit provide variety of reusable components which are frequently used to built User Interface of web and mobile apps.' }
       ],
       link: [
       {
