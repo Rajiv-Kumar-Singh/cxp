@@ -39,12 +39,12 @@ const TextShpere = () => {
   }, []);
 
   return (
-    &lt;>
-      &lt;div className="text-shpere">
+    <>
+      <div className="text-shpere">
         {/* span tag className must be "tagcloud"  */}
-        &lt;span className="tagcloud">&lt;/span>
-      &lt;/div>
-    &lt;/>
+        <span className="tagcloud"></span>
+      </div>
+    </>
   );
 };
 

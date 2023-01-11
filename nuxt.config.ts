@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       title: 'Codemmit',
       meta: [
         // <meta name="description" content="My amazing site">
-        { name: 'description', content: 'Codemmit provide ready to use components built using HTML, CSS, JavaScript, React.js or Vue.js. Codemmit provide variety of reusable components which are frequently used to built User Interface of web and mobile apps.' }
+        { name: 'description', content: 'Codemmit provides ready-to-use components, These components are built using HTML, CSS, JavaScript, React.js, or Vue.js. Codemmit provides a variety of reusable components, which are frequently used to build the user interface of web and mobile apps.' }
       ],
       link: [
       {

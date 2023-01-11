@@ -280,11 +280,9 @@ export default {
 
   // change color of Card text upon hover
   &__card:hover &__card-description {
-    background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
-      linear-gradient(to right, #e96443, #904e95) border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    p {
+      color: #00ffff;
+    }
   }
 
   &__card-box {
@@ -345,7 +343,7 @@ export default {
     align-items: center;
 
     p {
-      font-weight: 600;
+      font-weight: 100;
     }
   }
 
