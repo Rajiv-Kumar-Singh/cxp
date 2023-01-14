@@ -24,8 +24,14 @@
         </p>
       </div>
 
-      <div class="source-code__download-details">
-        <a href="/test.rar" download> Download file </a>
+      <!-- Download Button  -->
+      <div
+        class="source-code__download-details"
+        v-if="contentData.downloadButton"
+      >
+        <a href="/zips/react/3d-text-sphere.rar" download>
+          <span>Download Source Code</span>
+        </a>
       </div>
 
       <div
@@ -163,6 +169,43 @@ export default {
       position: relative;
       width: 100%;
       height: auto;
+    }
+  }
+
+  // Download button styling
+  &__download-details {
+    margin-top: 3em;
+    a {
+      padding: 0.7em 1em;
+      white-space: nowrap;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(#191d30, #191d30) padding-box,
+        linear-gradient(132deg, #ff5722, #fdb703) border-box;
+      border-radius: 0.5em;
+      border: 0.15em solid transparent;
+
+      span {
+        font-weight: 700;
+        background: linear-gradient(45deg, #ff5722, #fdb703) padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      &:hover {
+        background: linear-gradient(#ff5722, #fdb703) padding-box,
+          linear-gradient(45deg, #ff5722, #fdb703) border-box;
+
+        span {
+          background: linear-gradient(#ffffff, #ffffff) padding-box,
+            linear-gradient(132deg, #ffffff, #ffffff) border-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
     }
   }
 

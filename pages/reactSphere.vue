@@ -33,6 +33,7 @@ export default {
             text: 'Checkout TagCloud.js Here : https://www.npmjs.com/package/TagCloud',
           },
         ],
+        downloadButton: true,
         youtubeVideo: 'https://www.youtube.com/embed/5jlDHSqjZcc',
       },
       codeContent: {
