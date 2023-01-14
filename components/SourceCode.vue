@@ -24,7 +24,14 @@
         </p>
       </div>
 
-      <div class="source-code__tutorial-box">
+      <div class="source-code__download-details">
+        <a href="../assets/zips/dyst2.rar" download> Download file </a>
+      </div>
+
+      <div
+        class="source-code__tutorial-box"
+        v-if="contentData.youtubeVideo != ''"
+      >
         <h1><span>Watch Tutorial</span></h1>
         <iframe
           width="560"

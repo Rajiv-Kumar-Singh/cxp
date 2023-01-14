@@ -27,10 +27,13 @@ export default {
           'Hello Developers, In this blog you will learn to create an simple navbar with animation using HTML, CSS and JavaScript',
         info: [
           {
-            text: 'Checkout the source code below and take reference from video to create this.',
+            text: 'For creating this minimalistic navigation menu, you can use the source code provided below.',
+          },
+          {
+            text: 'JavaScript is used to add animation to add animations, which you can see inside script tag just above the closing body tag.',
           },
         ],
-        youtubeVideo: 'https://www.youtube.com/embed/7Udqo7dbi5U',
+        youtubeVideo: '',
       },
       codeContent: {
         htmlSyntax: true,

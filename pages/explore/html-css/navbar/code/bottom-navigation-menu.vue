@@ -27,10 +27,10 @@ export default {
           'Hello Developers, you will learn how to create bottom navigation menu using HTML, CSS and Javascript.',
         info: [
           {
-            text: 'Checkout the source code below and take reference from video to create this.',
+            text: 'For creating the navigation menu as shown above, you can use the source code provided below in your HTML and CSS file',
           },
         ],
-        youtubeVideo: 'https://www.youtube.com/embed/7Udqo7dbi5U',
+        youtubeVideo: '',
       },
       codeContent: {
         htmlSyntax: true,
