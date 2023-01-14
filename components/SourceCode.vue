@@ -25,7 +25,9 @@
       </div>
 
       <div class="source-code__download-details">
-        <a href="../assets/zips/test.txt" download> Download file </a>
+        <a href="../explore/html-css/navbar/code/html-navbar/test.rar" download>
+          Download file
+        </a>
       </div>
 
       <div
