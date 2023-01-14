@@ -25,7 +25,7 @@
       </div>
 
       <div class="source-code__download-details">
-        <a href="../assets/zips/dyst2.rar" download> Download file </a>
+        <a href="../assets/zips/test.txt" download> Download file </a>
       </div>
 
       <div
