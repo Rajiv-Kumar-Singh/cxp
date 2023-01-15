@@ -12,13 +12,13 @@
           <div class="post__cards-container">
             <div class="post__card" v-for="card in cards" :key="card.title">
               <div class="post__card-box">
-                <NuxtLink :to="`${card.codePageLink}`" class="post__card-route">
+                <!-- <NuxtLink :to="`${card.codePageLink}`" class="post__card-route">
                   <div class="post__card-thumbnail">
                     <img :src="`${card.thumbnail}`" alt="loading image" />
-                    <!-- <p>{{ card.title }}</p> -->
+                  
                   </div>
                   <div class="post__card-description">
-                    <!-- <p>{{ card.title }}</p> -->
+                  
                     <p>{{ card.description }}</p>
                   </div>
                 </NuxtLink>
@@ -38,6 +38,21 @@
                     <span>Watch on</span>
                     <img src="../assets/icon/youtube.svg" alt="yotube icon" />
                   </a>
+                </div> -->
+                <div class="post__card-thumbnail">
+                  <img :src="`${card.thumbnail}`" alt="thumbnail" />
+                </div>
+                <div class="post__card-description">
+                  <div class="post__card-title">
+                    <p>{{ card.description }}</p>
+                  </div>
+                  <div class="post__card-buttons">
+                    <NuxtLink
+                      :to="`${card.codePageLink}`"
+                      class="post__card-route"
+                      ><span>View Source Code</span></NuxtLink
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -304,11 +319,23 @@ export default {
     }
   }
 
+  &__card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   // change color of Card text upon hover
-  &__card:hover &__card-description {
+  &__card:hover &__card-title {
     p {
       color: #00ffff;
     }
+  }
+
+  &__card-title {
+    padding: 0.5em 0.5em;
+    font-weight: 300;
   }
 
   &__card-box {
@@ -317,28 +344,29 @@ export default {
     height: 100%;
   }
 
-  &__card-route {
-    color: #ffffff;
-
-    &::after {
-      position: absolute;
-      top: 0;
-      content: '';
-      width: 100%;
-      height: 100%;
-      z-index: 8;
-    }
+  &__card-buttons {
+    padding: 1em 0.5em;
+    width: 100%;
+    position: absolute;
+    top: 84%;
   }
 
-  &__spinner {
-    position: absolute;
-    top: 0;
+  &__card-route {
+    border: 0.15em solid transparent;
+    background: linear-gradient(#2c3149, #2c3149) padding-box,
+      linear-gradient(45deg, #e96443, #904e95) border-box;
+    display: inline-block;
     width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background: #00000080;
+    text-align: center;
+    border-radius: 0.4em;
+
+    span {
+      background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+        linear-gradient(to right, #e96443, #904e95) border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   }
 
   &__card-thumbnail {
@@ -349,59 +377,6 @@ export default {
       height: auto;
       border-top-left-radius: 0.5em;
       border-top-right-radius: 0.5em;
-    }
-
-    // p {
-    //   position: absolute;
-    //   bottom: 0;
-    //   padding: 0.5em;
-    //   max-height: 5em;
-    //   font-weight: 600;
-    //   background: rgb(0 0 0 / 81%);
-    // }
-  }
-
-  &__card-description {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      font-weight: 100;
-    }
-  }
-
-  &__card-btn-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__button {
-    position: absolute;
-    bottom: 0.5em;
-    width: 90%;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000000;
-    text-decoration: none;
-    background: #ffffff;
-    color: #000000;
-    border-radius: 0.5em;
-    z-index: 9;
-
-    span {
-      font-weight: 700;
-      margin-right: 1em;
-    }
-
-    img {
-      width: 2em;
-      height: auto;
     }
   }
 
