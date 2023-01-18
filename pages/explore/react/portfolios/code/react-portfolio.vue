@@ -60,7 +60,7 @@ export default {
             step: '🎉Hurray! You have successfully setup and run the project.',
           },
         ],
-        youtubeVideo: '',
+        youtubeVideo: 'https://www.youtube.com/embed/ftxwkYtzcv8',
         downloadButton: true,
         downloadButtonLink: '/zips/react/portfolio.rar',
       },
