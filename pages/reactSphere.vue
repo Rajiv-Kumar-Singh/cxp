@@ -34,6 +34,7 @@ export default {
           },
         ],
         downloadButton: true,
+        downloadButtonLink: '/zips/react/3d-text-sphere.rar',
         youtubeVideo: 'https://www.youtube.com/embed/5jlDHSqjZcc',
       },
       codeContent: {

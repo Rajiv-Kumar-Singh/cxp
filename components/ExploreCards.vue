@@ -7,10 +7,16 @@
         :key="card.title"
       >
         <div class="explore-cards__gif-box">
-          <div class="explore-cards__video-box">
+          <div class="explore-cards__video-box" v-if="card.thumbnail">
             <video autoplay loop muted>
               <source :src="`${card.thumbnail}`" type="video/mp4" />
             </video>
+          </div>
+          <div
+            class="explore-cards__image-thumbnail"
+            v-if="card.imageThumbnail"
+          >
+            <img :src="`${card.imageThumbnail}`" alt="thumbnail" />
           </div>
           <div class="explore-cards__content-box">
             <p class="explore-cards__content-title">{{ card.title }}</p>
@@ -97,7 +103,6 @@ export default {
   min-width: 32em;
   font-family: 'Teko', sans-serif;
   border-radius: 0.2em;
-  //   border: 2px solid red;
 
   &__container {
     position: relative;
@@ -114,15 +119,19 @@ export default {
   &__video-box {
     position: relative;
     width: 100%;
-    // overflow: hidden;
-    // padding-top: 56.25%;
 
     video {
-      //   position: absolute;
-      //   top: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   border: none;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image-thumbnail {
+    position: relative;
+    width: 100%;
+
+    img {
       position: relative;
       width: 100%;
       height: auto;

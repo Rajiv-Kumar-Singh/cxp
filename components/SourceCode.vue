@@ -24,14 +24,24 @@
         </p>
       </div>
 
+      <div class="source-code__key-points" v-if="contentData.listHeading">
+        <h3>{{ contentData.listHeading }}</h3>
+        <ul>
+          <li v-for="list in contentData.keyPoints" :key="list.listItem">
+            {{ list.listItem }}
+          </li>
+        </ul>
+      </div>
+
       <!-- Download Button  -->
       <div
         class="source-code__download-details"
         v-if="contentData.downloadButton"
       >
-        <a href="/zips/react/3d-text-sphere.rar" download>
+        <a :href="`${contentData.downloadButtonLink}`" download>
           <span>Download Source Code</span>
         </a>
+        <br />
       </div>
 
       <div
@@ -109,12 +119,9 @@ export default {
     top: 0;
     margin: 1.5em 0;
     width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     img {
-      width: 65%;
+      width: 70%;
       height: auto;
       border-radius: 0.5em;
     }
@@ -124,6 +131,7 @@ export default {
     font-size: 1em;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
+    line-height: 1.5;
     p {
       margin-top: 0.5em;
     }
@@ -157,18 +165,30 @@ export default {
     position: relative;
     max-width: 45em;
     width: 100%;
-    // overflow: hidden;
-    // padding-top: 56.25%;
-
     video {
-      //   position: absolute;
-      //   top: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   border: none;
       position: relative;
       width: 100%;
       height: auto;
+    }
+  }
+
+  // Key points styling
+  &__key-points {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 1em;
+    ul {
+      list-style-position: inside;
+      padding-left: 3%;
+      line-height: 1.5em;
+
+      li {
+        letter-spacing: 0.05em;
+        list-style-position: outside;
+        margin-bottom: 0.3em;
+        span {
+          color: #ffffff;
+        }
+      }
     }
   }
 

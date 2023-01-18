@@ -30,7 +30,7 @@
             <NuxtLink to="/explore/coming-soon">Cards</NuxtLink>
             <NuxtLink to="/explore/coming-soon">Sliders</NuxtLink>
             <NuxtLink to="/explore/coming-soon">3D</NuxtLink>
-            <NuxtLink to="/explore/coming-soon">Portfolio</NuxtLink>
+            <NuxtLink to="/explore/react/portfolios">Portfolio</NuxtLink>
           </div>
         </div>
         <div class="sidebar__topic-box">

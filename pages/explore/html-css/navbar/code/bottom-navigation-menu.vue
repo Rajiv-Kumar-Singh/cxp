@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       content: {
-        title: 'Create Responsive Navbar With Shadow Animation',
+        title: 'Create Responsive Bottom Navigation Menu',
         image: '',
         video: bottomNavigation,
         description:
