@@ -2,12 +2,14 @@
   <div class="code">
     <SourceCode :contentData="content" />
     <!-- <Code :codeData="codeContent" /> -->
+    <AllUploads />
   </div>
 </template>
 
 <script>
 import SourceCode from '~/components/SourceCode.vue';
-import Code from '~/components/Code.vue';
+// import Code from '~/components/Code.vue';
+import AllUploads from '~/components/AllUploads.vue';
 
 // import thumbnails
 import darkPortfolio from '~/assets/thumbnails/react/portfolios/portfolio.jpg';
@@ -44,9 +46,23 @@ export default {
               'For creating the 3D rotaing text sphere, it uses TagCloud package. For more info visit: https://www.npmjs.com/package/TagCloud',
           },
         ],
+        projectSetup: [
+          {
+            step: 'Download source code file',
+          },
+          {
+            step: 'In the main directory (outermost folder) run the command : `npm install`',
+          },
+          {
+            step: 'To start the development server run the command: `npm start`',
+          },
+          {
+            step: '🎉Hurray! You have successfully setup and run the project.',
+          },
+        ],
         youtubeVideo: '',
         downloadButton: true,
-        downloadButtonLink: '/zips/react/3d-text-sphere.rar',
+        downloadButtonLink: '/zips/react/portfolio.rar',
       },
       codeContent: {
         htmlSyntax: true,
@@ -57,7 +73,7 @@ export default {
   },
   components: {
     SourceCode,
-    Code,
+    AllUploads,
   },
 };
 </script>

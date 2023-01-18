@@ -33,6 +33,20 @@
         </ul>
       </div>
 
+      <!-- Project setup steps  -->
+      <div class="source-code__setup" v-if="contentData.projectSetup">
+        <h2>
+          Follow the steps to setup and run the project on your local system.
+        </h2>
+        <div
+          class="source-code__setup-steps"
+          v-for="(steps, index) in contentData.projectSetup"
+          :key="steps.step"
+        >
+          <h3>Step: {{ index + 1 }}</h3>
+          <p>{{ steps.step }}</p>
+        </div>
+      </div>
       <!-- Download Button  -->
       <div
         class="source-code__download-details"
@@ -122,6 +136,7 @@ export default {
 
     img {
       width: 70%;
+      min-width: 35em;
       height: auto;
       border-radius: 0.5em;
     }
@@ -189,6 +204,31 @@ export default {
           color: #ffffff;
         }
       }
+    }
+  }
+
+  // Project setup setps styling
+  &__setup {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 1.5em;
+    h2 {
+      color: #00ffff;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+  }
+  &__setup-steps {
+    margin: 1em 0;
+
+    h3 {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #00ffff;
+    }
+
+    p {
+      font-size: 1em;
+      padding-left: 0.2em;
     }
   }
 
