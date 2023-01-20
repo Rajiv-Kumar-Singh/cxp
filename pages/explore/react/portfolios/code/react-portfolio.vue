@@ -62,7 +62,7 @@ export default {
         ],
         youtubeVideo: 'https://www.youtube.com/embed/ftxwkYtzcv8',
         downloadButton: true,
-        downloadButtonLink: '/zips/react/portfolio.rar',
+        downloadButtonLink: '/zips/react/portfolio.zip',
       },
       codeContent: {
         htmlSyntax: true,
