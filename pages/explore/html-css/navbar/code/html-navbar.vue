@@ -30,7 +30,7 @@ export default {
             text: 'For creating this minimalistic navigation menu, you can use the source code provided below.',
           },
           {
-            text: 'JavaScript is used to add animation to add animations, which you can see inside script tag just above the closing body tag.',
+            text: 'JavaScript is used to add animations, which you can see inside script tag just above the closing body tag.',
           },
         ],
         youtubeVideo: '',
