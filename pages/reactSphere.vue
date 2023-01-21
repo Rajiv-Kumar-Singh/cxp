@@ -24,13 +24,27 @@ export default {
         image: threeDSphere,
         video: '',
         description:
-          'Hello Developers, In this blog you will learn to create this awesome 3D rotating text sphere using React.js and a package named TagCloud.js.',
+          '👋Hi there, In this blog post you will learn to create this awesome 3D rotating text sphere using React.js and a package named TagCloud.js.',
         info: [
           {
-            text: 'Checkout the source code below and take reference from video to create this rotating text cloud.',
+            text: 'You can also checkout the source code below and take reference from video tutorial to create this 3D rotating text cloud.',
           },
           {
             text: 'Checkout TagCloud.js Here : https://www.npmjs.com/package/TagCloud',
+          },
+        ],
+        projectSetup: [
+          {
+            step: 'Download source code file',
+          },
+          {
+            step: 'In the main directory (outermost folder) run the command : `npm install`',
+          },
+          {
+            step: 'To start the development server run the command: `npm start`',
+          },
+          {
+            step: '🎉Great! You have successfully setup and run the project.',
           },
         ],
         downloadButton: true,

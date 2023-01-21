@@ -26,7 +26,7 @@ export default {
         image: darkPortfolio,
         video: '',
         description:
-          'Hello Developers, This personal portfolio website is created using React.js.',
+          '👋Hi there, This personal portfolio website is created using React.js.',
         info: [
           {
             text: 'For creating this minimalistic and creative portfolio website you can download the source code by clicking the dowload button. For understanding the source code you need to have knowledge of React.js and few packages which are been used for animations, these packages are mentioned below, you can checkout it out at the mentioned links.',

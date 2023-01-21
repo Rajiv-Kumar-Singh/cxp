@@ -24,7 +24,7 @@ export default {
         image: videoControl,
         video: '',
         description:
-          'Hello Developers, In this blog you will learn to create custom HTML video controls (play/pause) button using HTML, CSS and JavaScript.',
+          '👋 Hi there, In this blog you will learn to create custom HTML video controls (play/pause) button using HTML, CSS and JavaScript.',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this rotating text cloud.',
