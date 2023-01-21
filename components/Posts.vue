@@ -76,6 +76,7 @@ import AllUploads from '../components/AllUploads.vue';
 import MainCarousel from '../components/MainCarousel.vue';
 
 // importing thumbnails
+import reactPortfolio from '../assets/thumbnails/react/portfolios/portfolio.jpg';
 import reactShpere from '../assets/thumbnails/3d-react-sphere.jpg';
 import VideoControl from '../assets/thumbnails/video-controls.jpg';
 import gradientButton from '../assets/thumbnails/gradient-button.jpg';
@@ -90,6 +91,14 @@ export default {
   data() {
     return {
       cards: [
+        {
+          codePageLink: '/explore/react/portfolios',
+          thumbnail: `${reactPortfolio}`,
+          title: '',
+          description:
+            'Create Responsive React.js Portfolio With Creative Aniamtion & Hover Effects',
+          youtubeLink: 'https://youtu.be/ftxwkYtzcv8',
+        },
         {
           codePageLink: '/reactsphere',
           thumbnail: `${reactShpere}`,
