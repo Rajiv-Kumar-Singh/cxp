@@ -10,16 +10,31 @@
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 
+// import animate on scroll library
+import AOS from 'aos';
+
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
   },
+  mounted() {
+    // Animation settings
+    AOS.init({
+      duration: 800,
+      delay: 0,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  },
 };
 </script>
 
 <style lang="scss">
+// Importing aos library css for animation
+@import 'aos/dist/aos.css';
+
 * {
   padding: 0;
   margin: 0;

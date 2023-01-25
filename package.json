@@ -13,7 +13,7 @@
     "sass-loader": "^10.4.1"
   },
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
+    "aos": "^2.3.4",
     "epic-spinners": "^2.0.0",
     "prismjs": "^1.29.0",
     "vue-gtag": "^2.0.1",

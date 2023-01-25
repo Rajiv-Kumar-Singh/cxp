@@ -3,9 +3,11 @@
     <div class="hero__container">
       <div class="hero__text-content">
         <small>Welcome! to</small>
-        <h1><span>Codemmit</span></h1>
-        <p>Explore FREE aspiring front-end content for your projects.</p>
-        <div class="hero__buttons">
+        <h1 data-aos="fade-up" data-aos-delay="0"><span>Codemmit</span></h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Explore FREE aspiring front-end content for your projects.
+        </p>
+        <div class="hero__buttons" data-aos="fade-up" data-aos-delay="200">
           <NuxtLink to="/explore">
             <button class="hero__primary-btn">Explore</button>
           </NuxtLink>
@@ -30,6 +32,10 @@
               alt="thumbnail"
               v-for="card in firstSlider"
               :key="card.image"
+              data-aos="fade-up"
+              :data-aos-delay="`${card.animationDelay}`"
+              data-aos-easing="ease-in-cubic"
+              data-aos-offset="-1000"
             />
           </div>
 
@@ -40,6 +46,10 @@
               alt="thumbnail"
               v-for="card in secondSlider"
               :key="card.image"
+              data-aos="fade-up"
+              :data-aos-delay="`${card.animationDelay}`"
+              data-aos-easing="ease-in-cubic"
+              data-aos-offset="-1000"
             />
           </div>
 
@@ -50,6 +60,10 @@
               alt="thumbnail"
               v-for="card in thirdSlider"
               :key="card.image"
+              data-aos="fade-up"
+              :data-aos-delay="`${card.animationDelay}`"
+              data-aos-easing="ease-in-cubic"
+              data-aos-offset="-1000"
             />
           </div>
         </div>
@@ -78,61 +92,79 @@ export default {
       firstSlider: [
         {
           image: `${reactShpere}`,
+          animationDelay: 100,
         },
         {
           image: `${VideoControl}`,
+          animationDelay: 200,
         },
         {
           image: `${gradientButton}`,
+          animationDelay: 300,
         },
         {
           image: `${htmlSphere}`,
+          animationDelay: 400,
         },
         {
           image: `${reactPortfolio}`,
+          animationDelay: 500,
         },
         {
           image: `${AdvTypewriter}`,
+          animationDelay: 600,
         },
       ],
       secondSlider: [
         {
           image: `${reactPortfolio}`,
+          animationDelay: 700,
         },
         {
           image: `${SkillBar}`,
+          animationDelay: 800,
         },
         {
           image: `${ScaleHover}`,
+          animationDelay: 900,
         },
         {
           image: `${LikeBtn}`,
+          animationDelay: 1000,
         },
         {
           image: `${Blob}`,
+          animationDelay: 1100,
         },
         {
           image: `${VideoControl}`,
+          animationDelay: 1200,
         },
       ],
       thirdSlider: [
         {
           image: `${ScaleHover}`,
+          animationDelay: 1300,
         },
         {
           image: `${AdvTypewriter}`,
+          animationDelay: 1400,
         },
         {
           image: `${SkillBar}`,
+          animationDelay: 1500,
         },
         {
           image: `${htmlSphere}`,
+          animationDelay: 1600,
         },
         {
           image: `${AdvTypewriter}`,
+          animationDelay: 1700,
         },
         {
           image: `${reactPortfolio}`,
+          animationDelay: 1800,
         },
       ],
     };
@@ -174,6 +206,7 @@ export default {
     h1 {
       font-family: 'Teko', sans-serif;
       line-height: 1;
+
       span {
         display: inline-block;
         font-size: 3em;

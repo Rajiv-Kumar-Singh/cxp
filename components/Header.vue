@@ -3,7 +3,7 @@
     <div class="header__logo">
       <NuxtLink to="/">
         <!-- <span>Codemmit</span> -->
-        <img src="~/assets/logo/codemmit-logo.svg" alt="" />
+        <img data-aos="zoom-in" src="~/assets/logo/codemmit-logo.svg" alt="" />
       </NuxtLink>
     </div>
     <div class="header__navigation-links">
