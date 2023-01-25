@@ -28,6 +28,7 @@ export default {
 
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
@@ -43,7 +44,6 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    margin-left: 5%;
     display: flex;
     justify-content: center;
     align-items: center;

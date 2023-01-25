@@ -89,7 +89,7 @@ export default {
     }
 
     &__content-outer-container {
-      width: 80%;
+      width: 90%;
       margin-left: 0;
       margin: 0 auto;
     }
