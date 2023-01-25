@@ -22,27 +22,6 @@
           </span>
         </div>
       </div>
-      <!-- <div class="hero__carousel">
-        <Carousel :settings="settings" :wrap-around="true">
-          <Slide v-for="slide in carouselSlides" :key="slide">
-            <div class="hero__carousel-container">
-              <iframe
-                width="560"
-                height="315"
-                :src="`${slide.videoURL}`"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </Slide>
-
-          <template #addons>
-            <Pagination />
-          </template>
-        </Carousel>
-      </div> -->
     </div>
   </div>
 </template>
@@ -101,13 +80,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   position: relative;
   top: 0;
   width: 100%;
   height: 90vh;
-  //   border: 2px solid red;
 
   &__container {
     position: relative;
@@ -251,15 +229,5 @@ export default {
       height: 2.6em;
     }
   }
-}
-
-.carousel__pagination-button:hover::after,
-.carousel__pagination-button--active::after {
-  background-color: transparent;
-  background: linear-gradient(156deg, #d90ae8, #e96443);
-}
-
-.carousel__icon {
-  fill: #ffffff;
 }
 </style>

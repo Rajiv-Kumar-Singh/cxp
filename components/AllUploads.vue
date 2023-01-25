@@ -167,6 +167,7 @@ export default {
   top: 0;
   width: 100%;
   padding-bottom: 5em;
+  background-color: #191d30;
 
   &__container {
     position: relative;

@@ -164,11 +164,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post {
   position: relative;
   top: 0;
+  padding-top: 2em;
   padding-bottom: 5em;
+  background-color: #191d30;
 
   &__container {
     position: relative;
