@@ -1,23 +1,37 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="header__logo">
       <NuxtLink to="/">
         <!-- <span>Codemmit</span> -->
         <img data-aos="zoom-in" src="~/assets/logo/codemmit-logo.svg" alt="" />
       </NuxtLink>
     </div>
-    <div class="header__navigation-links">
+    <nav class="header__navigation-links">
       <div class="header__hamburger-icon" @click="showHideNavbar">
         <span id="header__hamburger-top-line"></span>
         <span id="header__hamburger-middle-line"></span>
         <span id="header__hamburger-bottom-line"></span>
       </div>
       <div class="header__links" id="header__nav-links">
-        <NuxtLink to="/"> HOME </NuxtLink>
-        <NuxtLink to="/explore"> EXPLORE </NuxtLink>
-        <NuxtLink to="/#post"> POSTS </NuxtLink>
-        <NuxtLink to="/about"> ABOUT </NuxtLink>
-        <NuxtLink to="/contact"> CONTACT </NuxtLink>
+        <NuxtLink to="/" :class="homePage ? 'header__active-link' : ''">
+          HOME
+        </NuxtLink>
+        <NuxtLink
+          to="/explore"
+          :class="explorePage ? 'header__active-link' : ''"
+        >
+          EXPLORE
+        </NuxtLink>
+        <!-- <NuxtLink to="/#post"> POSTS </NuxtLink> -->
+        <NuxtLink to="/about" :class="aboutPage ? 'header__active-link' : ''">
+          ABOUT
+        </NuxtLink>
+        <NuxtLink
+          to="/contact"
+          :class="contactPage ? 'header__active-link' : ''"
+        >
+          CONTACT
+        </NuxtLink>
         <div class="header__social">
           <a href="https://www.instagram.com/cxp_codes/" target="_blank">
             <img src="~/assets/icon/instagram.svg" alt="ig icon" />
@@ -27,12 +41,48 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 </template>
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      isHomePage: false,
+      isExplorePage: false,
+      isAboutPage: false,
+      isContactPage: false,
+    };
+  },
+  computed: {
+    homePage() {
+      return this.isHomePage;
+    },
+    explorePage() {
+      return this.isExplorePage;
+    },
+    aboutPage() {
+      return this.isAboutPage;
+    },
+    contactPage() {
+      return this.isContactPage;
+    },
+  },
+  watch: {
+    $route() {
+      this.isHomePage = window.location.pathname === '/';
+      this.isExplorePage = window.location.pathname === '/explore';
+      this.isAboutPage = window.location.pathname === '/about';
+      this.isContactPage = window.location.pathname === '/contact';
+    },
+  },
+  mounted() {
+    this.isHomePage = window.location.pathname === '/';
+    this.isExplorePage = window.location.pathname === '/explore';
+    this.isAboutPage = window.location.pathname === '/about';
+    this.isContactPage = window.location.pathname === '/contact';
+  },
   methods: {
     showHideNavbar() {
       const navLinksDisplay = document.getElementById('header__nav-links');
@@ -125,6 +175,16 @@ export default {
         transform: scale(1.05, 1.05);
       }
     }
+  }
+
+  // Active link stying
+  &__active-link {
+    background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+      linear-gradient(to right, #e96443, #904e95) border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale(1.05, 1.05);
   }
 
   &__social {
