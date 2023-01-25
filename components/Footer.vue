@@ -1,7 +1,7 @@
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="footer__container">
-      <p>Copyright © 2022 Codemmit</p>
+      <p>Copyright © {{ new Date().getFullYear() }} Codemmit</p>
       <div class="footer__social">
         <a href="https://www.instagram.com/cxp_codes/" target="_blank">
           <img src="~/assets/icon/instagram.svg" alt="ig icon" />
@@ -11,7 +11,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
