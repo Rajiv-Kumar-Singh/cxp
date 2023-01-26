@@ -179,7 +179,7 @@ export default {
 
   // Active link stying
   &__active-link {
-    background: linear-gradient(to right, #d90ae8, #e96443) padding-box,
+    background: linear-gradient(to right, #ff7700, #f6ff00) padding-box,
       linear-gradient(to right, #e96443, #904e95) border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
