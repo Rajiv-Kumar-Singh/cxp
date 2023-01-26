@@ -24,7 +24,7 @@ export default {
         image: '',
         video: htmlNavbar,
         description:
-          'Hello Developers, In this blog you will learn to create an simple navbar with animation using HTML, CSS and JavaScript',
+          '👋 Hi there,, In this blog you will learn to create an simple navbar with animation using HTML, CSS and JavaScript',
         info: [
           {
             text: 'For creating this minimalistic navigation menu, you can use the source code provided below.',

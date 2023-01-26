@@ -24,7 +24,7 @@ export default {
         image: ScaleHover,
         video: '',
         description:
-          '👋 Hi there, In this blog post you will learn to create Like button, which when clicked it becomes red and if clicked again its color become grey(default state)',
+          '👋 Hi there, In this post you will learn to create Like button, which when clicked it becomes red and if clicked again its color become grey(default state)',
         info: [
           {
             text: 'JavaScript is used to add the click functionality to the buttons.',

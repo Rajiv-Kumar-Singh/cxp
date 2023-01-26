@@ -24,7 +24,7 @@ export default {
         image: SkillBar,
         video: '',
         description:
-          'Hello Developers, In this blog we will be adding scroll animtion to skill bar using aos library',
+          '👋 Hi there, In this post we will be adding scroll animtion to skill bar using aos library',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this.',

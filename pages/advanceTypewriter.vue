@@ -24,7 +24,7 @@ export default {
         image: videoControl,
         video: '',
         description:
-          '👋Hi there, In this blog you will learn to create an awesome typewriter effect using HTML, CSS and JavaScript',
+          '👋 Hi there, In this post you will learn to create an awesome typewriter effect using HTML, CSS and JavaScript',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this.',

@@ -24,7 +24,7 @@ export default {
         image: videoControl,
         video: '',
         description:
-          '👋 Hi there, In this blog post you will learn to create custom HTML video controls (play/pause) button using HTML, CSS and JavaScript. JavaScript is used to add the functionality to the play/pause button.',
+          '👋 Hi there, In this post you will learn to create custom HTML video controls (play/pause) button using HTML, CSS and JavaScript. JavaScript is used to add the functionality to the play/pause button.',
         info: [
           {
             text: '👨‍💻For creating custom video controls, you can use the source code provided below and paste it in your HTML and CSS file.',

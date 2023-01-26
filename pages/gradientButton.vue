@@ -25,7 +25,7 @@ export default {
         image: gradientButton,
         video: '',
         description:
-          '👋Hi there, In this blog we will be creating 3 gradient button with hover effect using HTML and CSS only',
+          '👋 Hi there, In this post we will be creating 3 gradient button with hover effect using HTML and CSS only',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this',

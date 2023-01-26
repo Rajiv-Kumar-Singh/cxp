@@ -24,7 +24,7 @@ export default {
         image: blob,
         video: '',
         description:
-          'Hello Developers, In this blog you will learn to create an awesome typewriter effect using HTML, CSS and JavaScript',
+          'Hello Developers, In this post you will learn to create an awesome typewriter effect using HTML, CSS and JavaScript',
         info: [
           {
             text: 'Checkout the source code below and take reference from video to create this.',

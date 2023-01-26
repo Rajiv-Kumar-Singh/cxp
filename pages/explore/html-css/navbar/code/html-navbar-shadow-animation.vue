@@ -24,7 +24,7 @@ export default {
         image: '',
         video: htmlNavbarShadowAniamtion,
         description:
-          'Hello Developers, you will learn how to add shadow animation below navbar using HTML and CSS only.',
+          '👋 Hi there, you will learn how to add shadow animation below navbar using HTML and CSS only.',
         info: [
           {
             text: 'For creating this awesome shadow animation, you can copy and paste the source code provided below in your HTML and CSS file.',
