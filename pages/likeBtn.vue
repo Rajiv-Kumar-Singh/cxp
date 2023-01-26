@@ -24,10 +24,13 @@ export default {
         image: ScaleHover,
         video: '',
         description:
-          'Hello Developers, In this blog you will learn to create an Like button, which when clicked it becomes red and if clicked again its color become grey',
+          '👋 Hi there, In this blog post you will learn to create Like button, which when clicked it becomes red and if clicked again its color become grey(default state)',
         info: [
           {
-            text: 'Checkout the source code below and take reference from video to create this.',
+            text: 'JavaScript is used to add the click functionality to the buttons.',
+          },
+          {
+            text: 'Checkout the source code provided below and you paste it in your HTML and CSS file to create these Like/Unlike button.',
           },
         ],
         youtubeVideo: 'https://www.youtube.com/embed/1AE3qtKA79w',
