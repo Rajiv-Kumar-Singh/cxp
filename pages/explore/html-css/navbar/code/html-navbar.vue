@@ -12,6 +12,9 @@ import Code from '~/components/Code.vue';
 // import video
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 
+// import video thumbnails
+import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-nav.jpg';
+
 // import code file
 import codes from '~/assets/codes/HTML/Navbar/htmlNavbar.js';
 
@@ -34,6 +37,7 @@ export default {
           },
         ],
         youtubeVideo: '',
+        videoThumbnail: htmlNavThumbnail,
       },
       codeContent: {
         htmlSyntax: true,

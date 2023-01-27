@@ -15,10 +15,15 @@
 import Sidebar from '~/components/Sidebar';
 import ExploreCards from '~/components/ExploreCards';
 
-// importing video thumbnails
+// importing video
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 import htmlNavbarShadowAniamtion from '~/assets/gifs/navbars/navbar-shadow-animation.mp4';
 import bottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
+
+// import video thumbnails
+import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-nav.jpg';
+import bottomNavbarVideoThumb from '~/assets/thumbnails/html/navbars/bottom-menu.jpg';
+import shadowAnimateNav from '~/assets/thumbnails/html/navbars/shadow-animate-navbar.jpg';
 
 export default {
   name: 'HtmlCssNavbars',
@@ -32,6 +37,7 @@ export default {
           description:
             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+          videoThumbnail: htmlNavThumbnail,
         },
         {
           codePageLink:
@@ -41,6 +47,7 @@ export default {
           description:
             'Using only HTML and CSS you can easily create shadow animation below Navbar.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+          videoThumbnail: shadowAnimateNav,
         },
         {
           codePageLink: '/explore/html-css/navbar/code/bottom-navigation-menu',
@@ -49,6 +56,7 @@ export default {
           description:
             'Create bottom navigation menu for mobile devices using HTML, CSS and Javascript with tab animation.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+          videoThumbnail: bottomNavbarVideoThumb,
         },
       ],
     };

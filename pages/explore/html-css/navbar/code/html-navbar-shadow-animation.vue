@@ -12,6 +12,9 @@ import Code from '~/components/Code.vue';
 // import thumbnails
 import htmlNavbarShadowAniamtion from '~/assets/gifs/navbars/navbar-shadow-animation.mp4';
 
+// import video thumbnails
+import shadowAnimateNav from '~/assets/thumbnails/html/navbars/shadow-animate-navbar.jpg';
+
 // import code file
 import codes from '~/assets/codes/HTML/Navbar/shadowAniNavbar.js';
 
@@ -31,6 +34,7 @@ export default {
           },
         ],
         youtubeVideo: '',
+        videoThumbnail: shadowAnimateNav,
       },
       codeContent: {
         htmlSyntax: true,

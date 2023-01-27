@@ -25,7 +25,11 @@
             class="explore-cards__image-thumbnail"
             v-if="card.imageThumbnail"
           >
-            <img :src="`${card.imageThumbnail}`" alt="thumbnail" />
+            <img
+              :src="`${card.imageThumbnail}`"
+              alt="thumbnail"
+              loading="lazy"
+            />
           </div>
           <div class="explore-cards__content-box">
             <p class="explore-cards__content-title">{{ card.title }}</p>

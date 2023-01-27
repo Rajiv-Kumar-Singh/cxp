@@ -9,9 +9,10 @@
           :src="`${contentData.image}`"
           v-if="contentData.image != ''"
           alt="thumbnail"
+          loading="lazy"
         />
         <div class="source-code__video-box" v-if="contentData.video != ''">
-          <video autoplay loop muted>
+          <video :poster="`${contentData.videoThumbnail}`" autoplay loop muted>
             <source :src="`${contentData.video}`" type="video/mp4" />
           </video>
         </div>
