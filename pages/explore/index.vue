@@ -20,7 +20,7 @@ import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 import htmlBottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
 
 // import video image thumbnail
-import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-navbar.jpg';
+import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-nav.jpg';
 import bottomNavbar from '~/assets/thumbnails/html/navbars/bottom-menu.jpg';
 
 // import image thumbnail
