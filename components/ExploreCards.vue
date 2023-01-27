@@ -6,9 +6,13 @@
         v-for="card in cardData"
         :key="card.title"
       >
+        <!-- Hover to Play tag  -->
+        <span class="explore-cards__hover-tag" v-if="card.thumbnail"
+          >Hover To Play</span
+        >
         <div class="explore-cards__gif-box">
           <div class="explore-cards__video-box" v-if="card.thumbnail">
-            <video autoplay loop muted>
+            <video class="explore-cards__video" loop muted>
               <source :src="`${card.thumbnail}`" type="video/mp4" />
             </video>
           </div>
@@ -52,45 +56,25 @@
 </template>
 
 <script>
-// importing thumbnails
-// import htmlNavbar from '../assets/gifs/navbars/html-navbar.mp4';
-
 export default {
   name: 'ExploreCards',
-  //   data() {
-  //     return {
-  //       cards: [
-  //         {
-  //           codePageLink: '/html-navbar',
-  //           thumbnail: `${htmlNavbar}`,
-  //           title: 'Create Responsive Navbar With Animation',
-  //           description:
-  //             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
-  //           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
-  //         },
-  //         {
-  //           codePageLink: '/html-navbar',
-  //           thumbnail: `${htmlNavbar}`,
-  //           title: 'Create Responsive Navbar With Animation',
-  //           description:
-  //             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
-  //           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
-  //         },
-  //         {
-  //           codePageLink: '/html-navbar',
-  //           thumbnail: `${htmlNavbar}`,
-  //           title: 'Create Responsive Navbar With Animation',
-  //           description:
-  //             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
-  //           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
-  //         },
-  //       ],
-  //     };
-  //   },
   props: {
     cardData: {
       type: Array,
     },
+  },
+  mounted() {
+    // Adding functinality to video hover play and pause
+    const video = document.getElementsByClassName('explore-cards__video');
+    let i;
+    for (i = 0; i < video.length; i++) {
+      video[i].addEventListener('mouseover', function () {
+        this.play();
+      });
+      video[i].addEventListener('mouseout', function () {
+        this.pause();
+      });
+    }
   },
 };
 </script>
@@ -110,6 +94,7 @@ export default {
   }
 
   &__card {
+    position: relative;
     margin-top: 1.5em;
     padding: 0.5em;
     background: #050819;
@@ -127,6 +112,20 @@ export default {
     }
   }
 
+  // Hover to play tag styling
+  &__hover-tag {
+    position: absolute;
+    top: 3.38em;
+    left: -4.8em;
+    content: 'Hover To Play';
+    white-space: nowrap;
+    background: #000000;
+    color: #ffffff;
+    padding: 0.1em 0.5em;
+    font-size: 0.875em;
+    transform: rotate(270deg);
+    font-family: 'Anonymous Pro', monospace;
+  }
   &__image-thumbnail {
     position: relative;
     width: 100%;

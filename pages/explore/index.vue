@@ -15,9 +15,12 @@
 import Sidebar from '~/components/Sidebar';
 import ExploreCards from '~/components/ExploreCards';
 
-// importing video thumbnails
+// importing video
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 import htmlBottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
+
+// import video thumbnail
+import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-navbar.jpg';
 
 export default {
   name: 'Explore',
@@ -31,6 +34,7 @@ export default {
           description:
             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+          videoThumbnail: htmlNavThumbnail,
         },
         {
           codePageLink: '/explore/html-css/navbar/code/bottom-navigation-menu',
