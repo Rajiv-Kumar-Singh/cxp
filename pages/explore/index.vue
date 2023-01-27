@@ -38,7 +38,7 @@ export default {
           description:
             'Used HTML, CSS and JavaScript for creating simple and responsive Navbar with some awesome animation effect.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
-          // videoThumbnail: `${htmlNavThumbnail}`,
+          videoThumbnail: `${darkPortfolio}`,
         },
         {
           codePageLink: '/explore/html-css/navbar/code/bottom-navigation-menu',

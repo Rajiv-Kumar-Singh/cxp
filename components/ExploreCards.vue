@@ -12,7 +12,12 @@
         >
         <div class="explore-cards__gif-box">
           <div class="explore-cards__video-box" v-if="card.thumbnail">
-            <video class="explore-cards__video" loop muted>
+            <video
+              class="explore-cards__video"
+              :poster="`${card.videoThumbnail}`"
+              loop
+              muted
+            >
               <source :src="`${card.thumbnail}`" type="video/mp4" />
             </video>
           </div>
