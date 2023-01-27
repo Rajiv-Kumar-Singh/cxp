@@ -17,7 +17,7 @@
         </div>
         <div class="hero__arrow-icon">
           <span>
-            <img src="~/assets/icon/arrow-down.svg" alt="arrow" />
+            <img src="~/assets/icon/arrow-down.svg" alt="arrow" loading="lazy"/>
           </span>
         </div>
       </div>
