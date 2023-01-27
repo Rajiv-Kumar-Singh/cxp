@@ -28,7 +28,6 @@ export default {
 
   &__container {
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
@@ -73,6 +72,12 @@ export default {
       background: linear-gradient(to right, #d90ae8, #00ffff);
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    &__container {
+      flex-direction: column;
     }
   }
 }

@@ -22,6 +22,9 @@ import htmlBottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
 // import video thumbnail
 import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-navbar.jpg';
 
+// import image thumbnail
+import darkPortfolio from '~/assets/thumbnails/react/portfolios/portfolio.jpg';
+
 export default {
   name: 'Explore',
   data() {
@@ -42,6 +45,15 @@ export default {
           title: 'Create Bottom Navigation Menu',
           description:
             'Create bottom navigation menu for mobile devices using HTML, CSS and Javascript with tab animation.',
+          youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+        },
+        {
+          codePageLink: '/explore/react/portfolios/code/react-portfolio',
+          thumbnail: '',
+          imageThumbnail: `${darkPortfolio}`,
+          title: 'Create Responsive React.js Portfolio Website',
+          description:
+            'This is an complete React.js personal portfolio website, It includes Scroll animations, Hover animations, 3D animations, Minimalist design, Use of SASS for styling components, follows BEM naming convention & many more....',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
       ],
