@@ -19,8 +19,9 @@ import ExploreCards from '~/components/ExploreCards';
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
 import htmlBottomNavbar from '~/assets/gifs/navbars/bottom-navigation-menu.mp4';
 
-// import video thumbnail
+// import video image thumbnail
 import htmlNavThumbnail from '~/assets/thumbnails/html/navbars/responsive-navbar.jpg';
+import bottomNavbar from '~/assets/thumbnails/html/navbars/bottom-navbar.jpg';
 
 // import image thumbnail
 import darkPortfolio from '~/assets/thumbnails/react/portfolios/portfolio.jpg';
@@ -46,6 +47,7 @@ export default {
           description:
             'Create bottom navigation menu for mobile devices using HTML, CSS and Javascript with tab animation.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
+          videoThumbnail: bottomNavbar,
         },
         {
           codePageLink: '/explore/react/portfolios/code/react-portfolio',
