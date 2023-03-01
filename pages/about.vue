@@ -20,7 +20,7 @@
       </p>
       <p>
         I hope these posts are helpful for you, if you have any queries or
-        suggestions you can <NuxtLink to="/"> Contact me </NuxtLink>
+        suggestions you can <NuxtLink to="/contact"> Contact me </NuxtLink>
       </p>
     </div>
     <div class="about__social">
