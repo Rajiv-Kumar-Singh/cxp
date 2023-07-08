@@ -87,11 +87,11 @@ export default {
     showHideNavbar() {
       const navLinksDisplay = document.getElementById('header__nav-links');
       const iconMiddleLine = document.getElementById(
-        'header__hamburger-middle-line'
+        'header__hamburger-middle-line',
       );
       const iconTopLine = document.getElementById('header__hamburger-top-line');
       const iconBottomLine = document.getElementById(
-        'header__hamburger-bottom-line'
+        'header__hamburger-bottom-line',
       );
       if (navLinksDisplay.style.display === 'flex') {
         navLinksDisplay.style.display = 'none';

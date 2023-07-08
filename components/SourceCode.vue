@@ -80,6 +80,9 @@
         <Code />
       </div> -->
     </div>
+    <div class="source-code__side-cards-bar">
+      <SideCardsBar />
+    </div>
   </div>
 </template>
 
@@ -87,11 +90,15 @@
 // importing thumbnails
 // import reactShpere from "../assets/thumbnails/3d-react-sphere.jpg";
 
+// import components
 import Code from '~/components/Code.vue';
+import SideCardsBar from '~/components/SideCardsBar.vue';
+
 export default {
   name: 'SourceCode',
   components: {
     Code,
+    SideCardsBar,
   },
   props: {
     contentData: {
@@ -105,6 +112,10 @@ export default {
 .source-code {
   position: relative;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   &__container {
     position: relative;
@@ -114,6 +125,14 @@ export default {
     // border: 2px solid red;
     color: #ffffff;
     padding: 2em 2%;
+  }
+
+  // SIDE BAR
+  &__side-cards-bar {
+    position: sticky;
+    top: 0;
+    padding-right: 2%;
+    width: 38vw;
   }
 
   &__title {
@@ -136,7 +155,7 @@ export default {
     width: 100%;
 
     img {
-      width: 70%;
+      width: 75%;
       min-width: 35em;
       height: auto;
       border-radius: 0.5em;
@@ -174,6 +193,9 @@ export default {
 
     iframe {
       border-radius: 0.5em;
+      max-width: 45em;
+      width: 100%;
+      height: 25em;
     }
   }
 
@@ -181,6 +203,7 @@ export default {
     position: relative;
     max-width: 45em;
     width: 100%;
+
     video {
       position: relative;
       width: 100%;
@@ -270,6 +293,46 @@ export default {
     }
   }
 
+  @media screen and (max-width: 1006px) {
+    &__image {
+      img {
+        min-width: 30em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 963px) {
+    &__container {
+      width: 100%;
+    }
+
+    &__image {
+      img {
+        width: 70%;
+        // min-width: 35em;
+      }
+    }
+
+    &__tutorial-box {
+      iframe {
+        width: 100%;
+      }
+    }
+
+    &__side-cards-bar {
+      width: 100%;
+      padding: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    &__image {
+      img {
+        min-width: 25em;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     &__container {
       width: 100%;
@@ -281,34 +344,9 @@ export default {
         min-width: 25em;
       }
     }
-
-    &__tutorial-box {
-      iframe {
-        position: relative;
-        display: inline-block;
-        margin: 0 auto;
-        width: 28em;
-      }
-    }
-  }
-
-  @media screen and (max-width: 478px) {
-    &__tutorial-box {
-      iframe {
-        width: 25em;
-        height: 15em;
-      }
-    }
   }
 
   @media screen and (max-width: 424px) {
-    &__tutorial-box {
-      iframe {
-        width: 23em;
-        height: 14em;
-      }
-    }
-
     &__image {
       img {
         min-width: 22em;

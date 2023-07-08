@@ -17,23 +17,23 @@
 <script>
 import Sidebar from '~/components/Sidebar';
 import ExploreCards from '~/components/ExploreCards';
-import SideCardsBar from '~/components/SideCardsBar.vue';
 
-// importing thumbnails
-import darkPortfolio from '~/assets/thumbnails/react/portfolios/portfolio.jpg';
+// import thumbnails
+import reactPriceFilter from '~/assets/thumbnails/react/filters/react-price-filter.jpg';
 
 export default {
-  name: 'Portfolios',
+  name: 'Filters',
   data() {
     return {
       cardsContent: [
         {
-          codePageLink: '/explore/react/portfolios/code/react-portfolio',
+          codePageLink: '/explore/react/filters/code/react-price-filter',
           thumbnail: '',
-          imageThumbnail: `${darkPortfolio}`,
-          title: 'Create Responsive React.js Portfolio Website',
+          imageThumbnail: `${reactPriceFilter}`,
+          title:
+            'Filter product by their prices using React.js, Sass and Bootstrap',
           description:
-            'This is an complete React.js personal portfolio website, It includes Scroll animations, Hover animations, 3D animations, Minimalist design, Use of SASS for styling components, follows BEM naming convention & many more....',
+            'Create price filter using React.js, with the help of this filter we can arrange products in "Low To High" or "High To Low" price order.',
           youtubeLink: 'https://youtu.be/5jlDHSqjZcc',
         },
       ],
@@ -42,7 +42,6 @@ export default {
   components: {
     Sidebar,
     ExploreCards,
-    SideCardsBar,
   },
 };
 </script>
@@ -58,6 +57,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    // border: 2px solid green;
   }
 
   &__sidebar-container {
@@ -75,6 +75,7 @@ export default {
   &__content-outer-container {
     width: 50%;
     margin-left: 0;
+    // border: 3px solid yellow;
   }
 
   @media screen and (max-width: 839px) {

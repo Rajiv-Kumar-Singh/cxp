@@ -12,38 +12,38 @@ import SourceCode from '~/components/SourceCode.vue';
 import AllUploads from '~/components/AllUploads.vue';
 
 // import thumbnails
-import darkPortfolio from '~/assets/thumbnails/react/portfolios/portfolio.jpg';
+import reactPriceFilter from '~/assets/thumbnails/react/filters/react-price-filter.jpg';
 
 // import code file
 import codes from '~/assets/codes/HTML/Navbar/bottomNavbar.js';
 
 export default {
-  name: 'ReactPortfolio',
+  name: 'ReactPriceFilter',
   data() {
     return {
       content: {
-        title: 'Create Responsive React.js Portfolio Website',
-        image: darkPortfolio,
+        title:
+          'Filter product by their prices using React.js, Sass and Bootstrap',
+        image: reactPriceFilter,
         video: '',
         description:
-          '👋Hi there, This personal portfolio website is created using React.js.',
+          '👋Hi there, We will be creating price filter using React.js, with the help of this filter we can arrange products in "Low To High" or "High To Low" price order.',
         info: [
           {
-            text: 'For creating this minimalistic and creative portfolio website you can download the source code by clicking the download button. For understanding the source code you need to have knowledge of React.js and few packages which are been used for animations, these packages are mentioned below, you can checkout it out at the mentioned links.',
+            text: 'You can download the source code by clicking the below download button. For understanding the source code you must have some basic knowledge of React.js and SASS.',
           },
           {
-            text: 'I hope this project will be helpful for you and add some value into your React.js journey.',
+            text: 'I hope this project will be helpful for you and add some value into your React.js journey. Thanks for reading.',
           },
         ],
         listHeading: 'Features:',
         keyPoints: [
           {
-            listItem:
-              'It uses AOS library for scroll animation. For more info visit: https://github.com/michalsnik/aos',
+            listItem: 'Drop Down menu to select filter options',
           },
           {
             listItem:
-              'For creating the 3D rotaing text sphere, it uses TagCloud package. For more info visit: https://www.npmjs.com/package/TagCloud',
+              'Arrange products according to their prices. "Low To High" or "High To Low" order',
           },
         ],
         projectSetup: [
@@ -60,9 +60,9 @@ export default {
             step: '🎉Hurray! You have successfully setup and run the project.',
           },
         ],
-        youtubeVideo: 'https://www.youtube.com/embed/ftxwkYtzcv8',
+        youtubeVideo: 'https://www.youtube.com/embed/o2rbKpIUfsI',
         downloadButton: true,
-        downloadButtonLink: '/zips/react/portfolio.zip',
+        downloadButtonLink: '/zips/react/react-price-filter.rar',
       },
       codeContent: {
         htmlSyntax: true,

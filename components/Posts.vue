@@ -10,7 +10,11 @@
             <img src="../assets/icon/arrow.svg" alt="loading image" />
           </div>
           <div class="post__cards-container">
-            <div class="post__card" v-for="card in cards" :key="card.title">
+            <div
+              class="post__card"
+              v-for="card in cards"
+              :key="card.description"
+            >
               <div class="post__card-box">
                 <!-- <NuxtLink :to="`${card.codePageLink}`" class="post__card-route">
                   <div class="post__card-thumbnail">
@@ -82,6 +86,7 @@ import VideoControl from '../assets/thumbnails/video-controls.jpg';
 import gradientButton from '../assets/thumbnails/gradient-button.jpg';
 import htmlSphere from '../assets/thumbnails/html-text-sphere.jpg';
 import AdvTypewriter from '../assets/thumbnails/adv-typewriter.jpg';
+import reactPriceFilter from '../assets/thumbnails/react/filters/react-price-filter.jpg';
 
 // importing spinner
 import { OrbitSpinner } from 'epic-spinners';
@@ -92,11 +97,19 @@ export default {
     return {
       cards: [
         {
+          codePageLink: '/explore/react/filters',
+          thumbnail: `${reactPriceFilter}`,
+          title: '',
+          description:
+            'Filter product by their prices using React.js, Sass and Bootstrap',
+          youtubeLink: 'https://youtu.be/o2rbKpIUfsI',
+        },
+        {
           codePageLink: '/explore/react/portfolios',
           thumbnail: `${reactPortfolio}`,
           title: '',
           description:
-            'Create Responsive React.js Portfolio With Creative Aniamtion & Hover Effects',
+            'Create Responsive React.js Portfolio With Creative Animation & Hover Effects',
           youtubeLink: 'https://youtu.be/ftxwkYtzcv8',
         },
         {

@@ -4,8 +4,13 @@
       <div class="explore__sidebar-container">
         <Sidebar />
       </div>
+
       <div class="explore__content-outer-container">
         <ExploreCards :cardData="cardsContent" />
+      </div>
+
+      <div class="explore__side-cards-bar">
+        <SideCardsBar />
       </div>
     </div>
   </div>
@@ -14,6 +19,7 @@
 <script>
 import Sidebar from '~/components/Sidebar';
 import ExploreCards from '~/components/ExploreCards';
+import SideCardsBar from '~/components/SideCardsBar.vue';
 
 // importing video
 import htmlNavbar from '~/assets/gifs/navbars/html-navbar.mp4';
@@ -64,6 +70,7 @@ export default {
   components: {
     Sidebar,
     ExploreCards,
+    SideCardsBar,
   },
 };
 </script>
@@ -77,9 +84,8 @@ export default {
 
   &__container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    // border: 2px solid green;
   }
 
   &__sidebar-container {
@@ -89,8 +95,28 @@ export default {
 
   &__content-outer-container {
     width: 50%;
-    margin-left: 5%;
-    // border: 3px solid yellow;
+  }
+
+  &__side-cards-bar {
+    position: sticky;
+    top: 0;
+    width: 28%;
+    padding: 0 0.5em 0 0;
+  }
+
+  @media screen and (max-width: 1196px) {
+    &__container {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    &__content-outer-container {
+      width: 60%;
+    }
+
+    &__side-cards-bar {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 839px) {

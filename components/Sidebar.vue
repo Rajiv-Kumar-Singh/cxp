@@ -30,6 +30,7 @@
             <NuxtLink to="/explore/coming-soon">Cards</NuxtLink>
             <NuxtLink to="/explore/coming-soon">Sliders</NuxtLink>
             <NuxtLink to="/explore/coming-soon">3D</NuxtLink>
+            <NuxtLink to="/explore/react/filters">Filters</NuxtLink>
             <NuxtLink to="/explore/react/portfolios">Portfolio</NuxtLink>
           </div>
         </div>
@@ -86,7 +87,6 @@ export default {
     top: 0;
     width: 100%;
     margin-top: 3em;
-    // border: 2px solid green;
 
     h3 {
       position: relative;
@@ -125,7 +125,6 @@ export default {
   }
 
   &__tags {
-    // font-family: 'Nunito', sans-serif;
     margin-top: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -136,7 +135,6 @@ export default {
       color: #ffffff;
       text-decoration: none;
       background: #2c3149;
-      //   margin-right: 0.5em;
       padding: 0.01em 0.2em;
       border-radius: 2px;
       letter-spacing: 0.04em;
