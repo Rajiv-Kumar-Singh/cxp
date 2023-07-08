@@ -7,12 +7,15 @@
 </template>
 
 <script>
+// import components
 import SourceCode from '~/components/SourceCode.vue';
-// import Code from '~/components/Code.vue';
 import AllUploads from '~/components/AllUploads.vue';
 
 // import thumbnails
 import reactPriceFilter from '~/assets/thumbnails/react/filters/react-price-filter.jpg';
+
+// import video
+import reactPriceFilterVideo from '~/assets/gifs/react/filters/react-price-filter.mp4';
 
 // import code file
 import codes from '~/assets/codes/HTML/Navbar/bottomNavbar.js';
@@ -24,8 +27,8 @@ export default {
       content: {
         title:
           'Filter product by their prices using React.js, Sass and Bootstrap',
-        image: reactPriceFilter,
-        video: '',
+        image: '',
+        video: reactPriceFilterVideo,
         description:
           '👋Hi there, We will be creating price filter using React.js, with the help of this filter we can arrange products in "Low To High" or "High To Low" price order.',
         info: [
