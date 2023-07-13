@@ -57,12 +57,15 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    // border: 2px solid green;
   }
 
   &__sidebar-container {
     position: sticky;
     top: 0;
+  }
+
+  &__content-outer-container {
+    width: 50%;
   }
 
   &__side-cards-bar {
@@ -72,10 +75,19 @@ export default {
     padding: 0 0.5em 0 0;
   }
 
-  &__content-outer-container {
-    width: 50%;
-    margin-left: 0;
-    // border: 3px solid yellow;
+  @media screen and (max-width: 1196px) {
+    &__container {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    &__content-outer-container {
+      width: 60%;
+    }
+
+    &__side-cards-bar {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 839px) {
